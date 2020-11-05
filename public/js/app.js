@@ -1960,8 +1960,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -37717,24 +37715,43 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("form", [
-      _c("h3", { staticClass: "text-center" }, [_vm._v("Contato")]),
+      _c("h3", { staticClass: "text-center" }, [_vm._v("Dados para Contato")]),
       _vm._v(" "),
       _c("div", { staticClass: "form-group row" }, [
-        _c("div", { staticClass: "col-md-4 " }, [
-          _c("label", { attrs: { for: "inputTipo1" } }, [_vm._v("Email")]),
-          _vm._v(" "),
+        _c(
+          "label",
+          {
+            staticClass: "col-sm-2 col-form-label td",
+            attrs: { for: "inputEmail3" }
+          },
+          [_vm._v("Email")]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md" }, [
           _c("input", {
             staticClass: "form-control",
-            attrs: { type: "text", id: "inputTipo3", placeholder: "Email" }
+            attrs: {
+              type: "email",
+              id: "inputEmail3",
+              placeholder: "exemple@email.com"
+            }
           })
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md" }, [
-          _c("label", { attrs: { for: "inputTipo1" } }, [_vm._v("Email")]),
-          _vm._v(" "),
+        _c(
+          "label",
+          { staticClass: "col-form-label td", attrs: { for: "inputTel3" } },
+          [_vm._v("Telefone")]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-3" }, [
           _c("input", {
             staticClass: "form-control",
-            attrs: { type: "text", id: "inputTipo3", placeholder: "Telefone" }
+            attrs: {
+              type: "tel",
+              id: "inputTel3",
+              placeholder: "(99) 99999-9999"
+            }
           })
         ])
       ])

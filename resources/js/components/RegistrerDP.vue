@@ -1,22 +1,22 @@
 <template>
 <form>    
         <h3 class="text-center">Dados Pessoais</h3>
-            <div class="form-group row">
+        <div class="form-group row">
             <label for="inputNome3" class="col-sm-2 col-form-label td">Nome Completo</label>
             <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputNome3" placeholder="Nome">
+                <input type="text" class="form-control" id="inputNome3" placeholder="Nome">
             </div>
         </div>
         <div class="form-group row">
             <label for="inputCPF3" class="col-sm-2 col-form-label td">CPF</label>
             <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputCPF3" placeholder="CPF">
+                <input type="text" class="form-control" id="inputCPF3" placeholder="CPF">
             </div>
         </div>
         <div class="form-group row">
             <label for="dataNasc" class="col-sm-2 col-form-label td">Data de Nascimento</label>
             <div class="col-sm-10">
-            <input class="form-control" type="date" id="dataNasc" max="2199-01-11">
+                <input class="form-control" type="date" id="dataNasc" max="2199-01-11">
             </div>  
         </div>
         <div class="form-group row">
@@ -33,7 +33,7 @@
                 </select>
             </div>
             <div class="col-md">
-            <input type="text" class="form-control" id="inputTipo3" placeholder="Nº">
+                <input type="text" class="form-control" id="inputTipo3" placeholder="Nº">
             </div>
         </div>
         

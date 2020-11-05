@@ -1,19 +1,17 @@
 <template>
-<form>    
-        <h3 class="text-center">Contato</h3>
-        <div class="form-group row">
-            <div class="col-md-4 ">
-                <label for="inputTipo1">Email</label>
-                <input type="text" class="form-control" id="inputTipo3" placeholder="Email">
-            </div>
-            <div class="col-md">
-                <label for="inputTipo1">Email</label>
-                <input type="text" class="form-control" id="inputTipo3" placeholder="Telefone">
-            </div>
+<form>
+    <h3 class="text-center">Dados para Contato</h3>
+    <div class="form-group row">
+        <label for="inputEmail3" class="col-sm-2 col-form-label td">Email</label>
+        <div class="col-md">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="exemple@email.com">
         </div>
-        
-
-</form> 
+        <label for="inputTel3" class="col-form-label td">Telefone</label>
+        <div class="col-md-3">
+            <input type="tel" class="form-control" id="inputTel3" placeholder="(99) 99999-9999">
+        </div>
+    </div>
+</form>
 </template>
 
 
