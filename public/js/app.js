@@ -1956,6 +1956,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -37711,18 +37717,24 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("form", [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col" }, [
+      _c("h3", { staticClass: "text-center" }, [_vm._v("Contato")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-group row" }, [
+        _c("div", { staticClass: "col-md-4 " }, [
+          _c("label", { attrs: { for: "inputTipo1" } }, [_vm._v("Email")]),
+          _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
-            attrs: { type: "text", placeholder: "First name" }
+            attrs: { type: "text", id: "inputTipo3", placeholder: "Email" }
           })
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col" }, [
+        _c("div", { staticClass: "col-md" }, [
+          _c("label", { attrs: { for: "inputTipo1" } }, [_vm._v("Email")]),
+          _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
-            attrs: { type: "text", placeholder: "Last name" }
+            attrs: { type: "text", id: "inputTipo3", placeholder: "Telefone" }
           })
         ])
       ])
@@ -50159,7 +50171,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
 Vue.component('registro-dp', __webpack_require__(/*! ./components/RegistrerDP.vue */ "./resources/js/components/RegistrerDP.vue")["default"]);
-Vue.component('registro-ct', __webpack_require__(/*! ./components/RegisterC.vue */ "./resources/js/components/RegisterC.vue"));
+Vue.component('registro-ct', __webpack_require__(/*! ./components/RegisterC.vue */ "./resources/js/components/RegisterC.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -50442,8 +50454,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\laravel-tips\ghosp\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\laravel-tips\ghosp\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\laravel-tips\gHosp-1\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\laravel-tips\gHosp-1\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

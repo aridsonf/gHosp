@@ -17,9 +17,8 @@
         <div class="card-body text-dark bg-dark">
             <div class="conteiner-fluid py-3 px-lg-5 border rounded bg-gainsboro">
     <div id="app">
+        
         <registro-dp></registro-dp>
-    </div>
-    <div id="app">
         <registro-ct></registro-ct>
     </div>
     <div class="form-group row ">
