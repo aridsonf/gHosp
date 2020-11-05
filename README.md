@@ -29,7 +29,7 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
 
 ## 2.2 Casos de Uso
 ### 2.2.1 Diagrama de Casos de Uso
-![Diagrama de Casos de Uso](/gHosp - Diagrama de Casos de Uso.png)
+![Diagrama de Casos de Uso](gHosp - Diagrama de Casos de Uso.png)
 Format: ![Alt Text](url)
 ### 2.2.2 Descrição dos Casos de Uso
 * ##### Definir equipe
