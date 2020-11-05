@@ -1,6 +1,8 @@
 <template>
 <form>
+    <hr/>
     <h3 class="text-center">Dados para Contato</h3>
+    <br/>
     <div class="form-group row">
         <label for="inputEmail3" class="col-sm-2 col-form-label td">Email</label>
         <div class="col-md">

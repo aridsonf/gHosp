@@ -1960,6 +1960,74 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RegisterE.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/RegisterE.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -1977,6 +2045,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -37715,7 +37785,11 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("form", [
+      _c("hr"),
+      _vm._v(" "),
       _c("h3", { staticClass: "text-center" }, [_vm._v("Dados para Contato")]),
+      _vm._v(" "),
+      _c("br"),
       _vm._v(" "),
       _c("div", { staticClass: "form-group row" }, [
         _c(
@@ -37764,6 +37838,166 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RegisterE.vue?vue&type=template&id=4d3501b2&":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/RegisterE.vue?vue&type=template&id=4d3501b2& ***!
+  \************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("form", [
+      _c("hr"),
+      _vm._v(" "),
+      _c("h3", { staticClass: "text-center" }, [_vm._v("Endereço")]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-group row" }, [
+        _c(
+          "label",
+          {
+            staticClass: "col-sm-2 col-form-label td",
+            attrs: { for: "inputText3" }
+          },
+          [_vm._v("País")]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "text", id: "inputText3", placeholder: "Brasil" }
+          })
+        ]),
+        _vm._v(" "),
+        _c(
+          "label",
+          { staticClass: "col-form-label td", attrs: { for: "inputText3" } },
+          [_vm._v("Estado")]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-3" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "Text", id: "inputText3", placeholder: "Maranhão" }
+          })
+        ]),
+        _vm._v(" "),
+        _c(
+          "label",
+          { staticClass: "col-form-label td", attrs: { for: "inputText3" } },
+          [_vm._v("Cidade")]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "Text", id: "inputText3", placeholder: "São luís" }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-group row" }, [
+        _c(
+          "label",
+          {
+            staticClass: "col-sm-2 col-form-label td",
+            attrs: { for: "inputText3" }
+          },
+          [_vm._v("CEP")]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-2" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "Text", id: "inputText3", placeholder: "12345-678" }
+          })
+        ]),
+        _vm._v(" "),
+        _c(
+          "label",
+          { staticClass: "col-form-label td", attrs: { for: "inputText3" } },
+          [_vm._v("Endereço")]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: {
+              type: "Text",
+              id: "inputText3",
+              placeholder: "Rua da casa do caraí"
+            }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-group row" }, [
+        _c(
+          "label",
+          {
+            staticClass: "col-sm-2 col-form-label td",
+            attrs: { for: "inputText3" }
+          },
+          [_vm._v("Bairro")]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-2" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "text", id: "inputText3", placeholder: "Centro" }
+          })
+        ]),
+        _vm._v(" "),
+        _c(
+          "label",
+          { staticClass: "col-form-label td", attrs: { for: "inputText3" } },
+          [_vm._v("Número")]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-1" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "Text", id: "inputTel3", placeholder: "666" }
+          })
+        ]),
+        _vm._v(" "),
+        _c(
+          "label",
+          { staticClass: "col-form-label td", attrs: { for: "inputText3" } },
+          [_vm._v("Complemento")]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "Text", id: "inputText3", placeholder: "UFMA" }
+          })
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RegistrerDP.vue?vue&type=template&id=724f7fcc&":
 /*!**************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/RegistrerDP.vue?vue&type=template&id=724f7fcc& ***!
@@ -37788,6 +38022,8 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("form", [
       _c("h3", { staticClass: "text-center" }, [_vm._v("Dados Pessoais")]),
+      _vm._v(" "),
+      _c("br"),
       _vm._v(" "),
       _c("div", { staticClass: "form-group row" }, [
         _c(
@@ -50189,6 +50425,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
 Vue.component('registro-dp', __webpack_require__(/*! ./components/RegistrerDP.vue */ "./resources/js/components/RegistrerDP.vue")["default"]);
 Vue.component('registro-ct', __webpack_require__(/*! ./components/RegisterC.vue */ "./resources/js/components/RegisterC.vue")["default"]);
+Vue.component('registro-end', __webpack_require__(/*! ./components/RegisterE.vue */ "./resources/js/components/RegisterE.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -50384,6 +50621,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/RegisterE.vue":
+/*!***********************************************!*\
+  !*** ./resources/js/components/RegisterE.vue ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _RegisterE_vue_vue_type_template_id_4d3501b2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RegisterE.vue?vue&type=template&id=4d3501b2& */ "./resources/js/components/RegisterE.vue?vue&type=template&id=4d3501b2&");
+/* harmony import */ var _RegisterE_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RegisterE.vue?vue&type=script&lang=js& */ "./resources/js/components/RegisterE.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _RegisterE_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _RegisterE_vue_vue_type_template_id_4d3501b2___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _RegisterE_vue_vue_type_template_id_4d3501b2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/RegisterE.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/RegisterE.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/RegisterE.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterE_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./RegisterE.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RegisterE.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterE_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/RegisterE.vue?vue&type=template&id=4d3501b2&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/RegisterE.vue?vue&type=template&id=4d3501b2& ***!
+  \******************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterE_vue_vue_type_template_id_4d3501b2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./RegisterE.vue?vue&type=template&id=4d3501b2& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RegisterE.vue?vue&type=template&id=4d3501b2&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterE_vue_vue_type_template_id_4d3501b2___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterE_vue_vue_type_template_id_4d3501b2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/RegistrerDP.vue":
 /*!*************************************************!*\
   !*** ./resources/js/components/RegistrerDP.vue ***!
@@ -50471,8 +50777,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\laravel-tips\gHosp-1\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\laravel-tips\gHosp-1\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\laravel-tips\gHosp-2\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\laravel-tips\gHosp-2\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

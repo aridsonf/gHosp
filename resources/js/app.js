@@ -22,7 +22,7 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('registro-dp', require('./components/RegistrerDP.vue').default);
 Vue.component('registro-ct', require('./components/RegisterC.vue').default);
-
+Vue.component('registro-end', require('./components/RegisterE.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

@@ -1,6 +1,8 @@
 <template>
 <form>    
         <h3 class="text-center">Dados Pessoais</h3>
+        <br/>
+
         <div class="form-group row">
             <label for="inputNome3" class="col-sm-2 col-form-label td">Nome Completo</label>
             <div class="col-sm-10">

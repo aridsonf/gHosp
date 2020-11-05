@@ -20,7 +20,9 @@
         
         <registro-dp></registro-dp>
         <registro-ct></registro-ct>
+        <registro-end></registro-end>
     </div>
+    <hr/>
     <div class="form-group row ">
         <div class="col text-center">
         <button type="submit" class="btn btn-light shadow-sm">Cadastrar</button>
