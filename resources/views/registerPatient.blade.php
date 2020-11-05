@@ -10,7 +10,7 @@
 
 
     </head>
-<body>
+<body></body>
         <div class="conteiner-fluid ">
         <div class="card border-dark mb-3 ">
             <div class="card-header text-center" style="font-size:30px"><b>CADASTRO DE PACIENTE</b></div>

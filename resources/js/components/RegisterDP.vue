@@ -6,19 +6,19 @@
         <div class="form-group row">
             <label for="inputNome3" class="col-sm-2 col-form-label td">Nome Completo</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputNome3" placeholder="Nome">
+                <input type="text" class="form-control" id="inputNome3" placeholder="Uzumaki Naruto">
             </div>
         </div>
         <div class="form-group row">
             <label for="inputCPF3" class="col-sm-2 col-form-label td">CPF</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputCPF3" placeholder="CPF">
+                <input type="text" class="form-control" id="inputCPF3" placeholder="666.666.666-66">
             </div>
         </div>
         <div class="form-group row">
             <label for="dataNasc" class="col-sm-2 col-form-label td">Data de Nascimento</label>
             <div class="col-sm-10">
-                <input class="form-control" type="date" id="dataNasc" max="2199-01-11">
+                <input class="form-control" type="date" id="dataNasc" max="2199-01-11" placeholder="31/10/1999">
             </div>  
         </div>
         <div class="form-group row">

@@ -20,9 +20,10 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('registro-dp', require('./components/RegistrerDP.vue').default);
+Vue.component('registro-dp', require('./components/RegisterDP.vue').default);
 Vue.component('registro-ct', require('./components/RegisterC.vue').default);
 Vue.component('registro-end', require('./components/RegisterE.vue').default);
+Vue.component('registro-m', require('./components/RegisterM.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
