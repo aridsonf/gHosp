@@ -21,6 +21,7 @@
         <registro-dp></registro-dp>
         <registro-ct></registro-ct>
         <registro-end></registro-end>
+        <registro-m></registro-m>
     </div>
     <hr/>
     <div class="form-group row ">

@@ -4,15 +4,37 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Cadastro de Profissional</title>
-        <script rel="stylesheet" href="{{asset('css/app.css')}}"></script>
+        <title>Cadastro de Prossional</title>
+        <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
     </head>
-<body>
+<body></body>
+        <div class="conteiner-fluid ">
+        <div class="card border-dark mb-3 ">
+            <div class="card-header text-center" style="font-size:30px"><b>CADASTRO DE PROFISSIONAL</b></div>
+        <div class="card-body text-dark bg-dark">
+            <div class="conteiner-fluid py-3 px-lg-5 border rounded bg-gainsboro">
     <div id="app">
-        <registroDP></registroDP>
+        
+        <registro-dp></registro-dp>
+        <registro-ct></registro-ct>
+        <registro-end></registro-end>
+        <registro-m></registro-m>
     </div>
+    <hr/>
+    <div class="form-group row ">
+        <div class="col text-center">
+        <button type="submit" class="btn btn-light shadow-sm">Cadastrar</button>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+ 
     <script src="{{asset('js/app.js')}}"></script>
 </body>
 </html>

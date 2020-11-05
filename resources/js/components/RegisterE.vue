@@ -5,81 +5,83 @@
     <br />
 
     <div class="form-group row">
-      <label for="inputText3" class="col-sm-2 col-form-label td">País</label>
+      <label for="inputPais" class="col-sm-2 col-form-label td">País</label>
       <div class="col-md">
         <input
           type="text"
           class="form-control"
-          id="inputText3"
+          id="inputPais"
           placeholder="Brasil"
         />
       </div>
-      <label for="inputText3" class="col-form-label td">Estado</label>
+      <label for="inputEstado" class="col-form-label td">Estado</label>
       <div class="col-md-3">
         <input
           type="Text"
           class="form-control"
-          id="inputText3"
+          id="inputEstado"
           placeholder="Maranhão"
         />
       </div>
-      <label for="inputText3" class="col-form-label td">Cidade</label>
+      <label for="inputCidade" class="col-form-label td">Cidade</label>
       <div class="col-md">
         <input
           type="Text"
           class="form-control"
-          id="inputText3"
+          id="inputCidade"
           placeholder="São luís"
         />
       </div>
     </div>
     <div class="form-group row">
-      <label for="inputText3" class="col-sm-2 col-form-label td">CEP</label>
+      <label for="inputCEP" class="col-sm-2 col-form-label td">CEP</label>
       <div class="col-md-2">
         <input
           type="Text"
           class="form-control"
-          id="inputText3"
+          id="inputCEP"
           placeholder="12345-678"
         />
       </div>
-      <label for="inputText3" class="col-form-label td">Endereçosdf</label>
+      <label for="inputEndereco" class="col-form-label td">Endereço</label>
       <div class="col-md">
         <input
           type="Text"
           class="form-control"
-          id="inputText3"
+          id="inputEndereco"
           placeholder="Rua exemplo"
         />
       </div>
     </div>
 
     <div class="form-group row">
-      <label for="inputText3" class="col-sm-2 col-form-label td">Bairro</label>
+      <label for="inputBairro" class="col-sm-2 col-form-label td">Bairro</label>
       <div class="col-md-2">
         <input
           type="text"
           class="form-control"
-          id="inputText3"
+          id="inputBairro"
           placeholder="Centro"
         />
       </div>
-      <label for="inputText3" class="col-form-label td">Número</label>
+      <label for="inputNumero" class="col-form-label td">Número</label>
       <div class="col-md-1">
         <input
           type="Text"
           class="form-control"
-          id="inputTel3"
+          id="inputNumero"
           placeholder="123"
         />
       </div>
-      <label for="inputText3" class="col-form-label td">Complemento</label>
+      <label for="inputComplemento" class="col-form-label td"
+        >Complemento</label
+      >
       <div class="col-md">
         <input
           type="Text"
           class="form-control"
-          id="inputText3"
-          placeholder="UFMA"
+          id="inputComplemento"
+          placeholder="Proxíma à UFMA"
         />
       </div>
     </div>
