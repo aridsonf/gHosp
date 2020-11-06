@@ -21,10 +21,11 @@ Route::get('/', function () {
 
 
 Route::get('/cadastro-paciente', function () {
-    // return view('welcome');
     return view('cadastro-paciente');
 
 });
+
+Route::get('/get-tipo-funcionario', 'App\Http\Controllers\TipoFuncionarioController@getTipoFuncionario');
 
 
 Route::post('/cadastrar-paciente', 'App\Http\Controllers\AdministradorController@cadastrarPaciente');
