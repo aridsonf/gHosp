@@ -6,13 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Paciente;
 use App\Models\Endereco;
 
-class PacienteController extends Controller
+class AdministradorController extends Controller
 {
-    public function create()
-    {
-        return view('cadastro-paciente2');
-    }
-
     public function cadastrarPaciente(Request $request)
     {
         // dd($request)->all();

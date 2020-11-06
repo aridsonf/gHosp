@@ -27,8 +27,8 @@ Route::get('/cadastro-paciente', function () {
 });
 
 
-Route::post('/cadastrar-paciente', 'App\Http\Controllers\PacienteController@cadastrarPaciente');
+Route::post('/cadastrar-paciente', 'App\Http\Controllers\AdministradorController@cadastrarPaciente');
 
-Route::get('/cadastrar-paciente', 'App\Http\Controllers\PatientController@registerPatient');
+// Route::get('/cadastrar-paciente', 'App\Http\Controllers\PatientController@registerPatient');
 
-Route::get('/cadastrar-profissional', 'App\Http\Controllers\ProfissionalController@registerProfissional');
+// Route::get('/cadastrar-profissional', 'App\Http\Controllers\ProfissionalController@registerProfissional');
