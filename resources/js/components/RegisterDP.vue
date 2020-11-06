@@ -12,7 +12,7 @@
           type="text"
           class="form-control"
           id="inputNome"
-          placeholder="Uzumaki Naruto"
+          placeholder="Boku no Pico"
         />
       </div>
     </div>

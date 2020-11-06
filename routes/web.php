@@ -19,4 +19,4 @@ Route::get('/', function () {
 
 Route::get('/cadastrar-paciente', 'App\Http\Controllers\PatientController@registerPatient');
 
-Route::get('cadastrar-profissional', 'App\Http\Controllers\ProfissionalController@registerProfissional');
+Route::get('/cadastrar-profissional', 'App\Http\Controllers\ProfissionalController@registerProfissional');

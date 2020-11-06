@@ -19,9 +19,9 @@
     <div id="app">
         
         <registro-dp></registro-dp>
+        <registro-p></registro-p>
         <registro-ct></registro-ct>
         <registro-end></registro-end>
-        <registro-m></registro-m>
     </div>
     <hr/>
     <div class="form-group row ">
