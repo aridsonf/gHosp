@@ -28,7 +28,7 @@ Route::get('/cadastro-paciente', function () {
 Route::get('/get-tipo-funcionario', 'App\Http\Controllers\TipoFuncionarioController@getTipoFuncionario');
 
 
-Route::post('/cadastrar-paciente', 'App\Http\Controllers\AdministradorController@cadastrarPaciente');
+Route::post('/cadastrar-paciente', 'App\Http\Controllers\UsuarioController@cadastrarPaciente');
 
 // Route::get('/cadastrar-paciente', 'App\Http\Controllers\PatientController@registerPatient');
 

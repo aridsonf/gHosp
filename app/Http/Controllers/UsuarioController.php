@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Paciente;
 use App\Models\Endereco;
 
-class AdministradorController extends Controller
+class UsuarioController extends Controller
 {
     public function cadastrarPaciente(Request $request)
     {
