@@ -17,6 +17,10 @@
 
     <registro-dp></registro-dp>
     <registro-ct></registro-ct>
+    <registro-ct></registro-ct>
+    <registro-end></registro-end>
+
+    
     </div>
     <div class="form-group row ">
         <div class="col text-center">
