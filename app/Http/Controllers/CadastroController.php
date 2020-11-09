@@ -49,7 +49,7 @@ class CadastroController extends Controller
         $paciente->telefone = $request->telefone;
         $paciente->doencas_cronicas = $request->doencas_cronicas;
         $paciente->alergias = $request->alergias;
-        $paciente->idendereco = $endereco->id;
+        $paciente->endereco_id = $endereco->id;
 
         $paciente->save();
 
