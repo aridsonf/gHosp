@@ -9,11 +9,9 @@ class Paciente extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nome', 'email', 'cpf', 'data_nascimento', 'plano_saude', 'idendereco', 'alergias', 'doencas_cronicas', 'identidade', 'orgao_expedidor', 'sexo', 'telefone'];
+    protected $fillable = ['nome', 'email', 'cpf', 'data_nascimento', 'plano_saude', 'endereco_id', 'alergias', 'doencas_cronicas', 'identidade', 'orgao_expedidor', 'sexo', 'telefone'];
 
     public $timestamps = false;
 
-    public function endereco(){
-        return $this->hasOne(Endereco::class, 'idpessoa');
-    }
+    public function hasEndereco() { return $this->hasOne('App\Model\Endereco', 'id_endereco', 'endereco_id'); }
 }

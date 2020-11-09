@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TipoFuncionario extends Model
+class EspecialidadeMedica extends Model
 {
     use HasFactory;
 
-    protected $table = "tipos_funcionarios";
+    protected $table = "especialidades_medicas";
 }

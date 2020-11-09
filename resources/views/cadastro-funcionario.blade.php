@@ -108,22 +108,28 @@
                             <div class="form-group row">
                                 <label for="inputPais" class="col-sm-2 col-form-label td">País</label>
                                 <div class="col-md">
-                                    <input
-                                    type="text"
-                                    class="form-control"
-                                    id="inputPais"
-                                    placeholder=""
-                                    v-model="dados.pais"
-                                    />
+                                     <select v-model="dados.pais" class="form-control">
+                                        <option v-for="pais in paises" v-bind:value="pais.id">
+                                            @{{ pais.nome_pt }}
+                                        </option>
+                                    </select>
                                 </div>
+                                
                                 <label for="inputEstado" class="col-form-label td">Estado</label>
-                                <div class="col-md-3">
+                                <div v-if="dados.pais === 1" class="col-md" >
+                                     <select v-model="dados.estado_id" class="form-control">
+                                        <option v-for="estado in estados" v-bind:value="estado.id">
+                                            @{{ estado.nome }}
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3" v-if="dados.pais != 1">
                                     <input
                                     type="Text"
                                     class="form-control"
                                     id="inputEstado"
                                     placeholder=""
-                                    v-model="dados.estado"
+                                    v-model="dados.nome_estado"
                                     />
                                 </div>
                                 <label for="inputCidade" class="col-form-label td">Cidade</label>
@@ -199,8 +205,54 @@
         
                         <fieldset >   
                             <hr />
-                            <h3 class="text-center">Tipo de Funcionário</h3>
+                            <h3 class="text-center">Dados Profissionais</h3>
                             <br />
+                            <div class="form-group row">
+                                <label for="inputNome3" class="col-sm-2 col-form-label td">Tipo de Funcionário</label>
+                                <div class="col-sm-10">
+                                    <select v-model="dados.tipo_funcionario_id" class="form-control">
+                                        <option v-for="tipo_funcionario in tipos_funcionarios" v-bind:value="tipo_funcionario.id">
+                                            @{{ tipo_funcionario.nome_funcionario }}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div v-if="dados.tipo_funcionario_id === 1">
+
+                                <div class="form-group row">
+                                    <label for="crmMedico" class="col-sm-2 col-form-label td">CRM</label>
+                                    <div class="col-sm-10">
+                                        <input
+                                        type="text"
+                                        class="form-control"
+                                        name="crmMedico"
+                                        id="crmMedico"
+                                        v-model="dados.crm"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="especialidadeMedico" class="col-sm-2 col-form-label td">Especialidade</label>
+                                    <div class="col-sm-4">
+                                        <select v-model="dados.especialidade_id" class="form-control">
+                                            <option v-for="especialidade in especialidades" v-bind:value="especialidade.id">
+                                                @{{ especialidade.nome_especialidade }}
+                                            </option>
+                                        </select>
+                                    </div>
+
+                                    <label for="areaAtuacaoMedico" class="col-sm-2 col-form-label td">Área de Atuação</label>
+                                    <div class="col-sm-4">
+                                        <select v-model="dados.area_atuacao_id" class="form-control">
+                                            <option v-for="area_atuacao in areas_atuacao" v-bind:value="areas_atuacao.id">
+                                                @{{ area_atuacao.nome_area_atuacao }}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
                         </fieldset>
 
                         <button @click="enviar()" class="btn btn-primary btn-lg btn-block">Enviar</button>
@@ -217,6 +269,11 @@
                 urlBase: "{{ url('') }}",
                 checkAlergia: false,
                 checkDoenca: false,
+                paises: <?=json_encode($paises) ?>,
+                estados: <?=json_encode($estados) ?>,
+                tipos_funcionarios: <?=json_encode($tipos_funcionarios) ?>,
+                especialidades: <?=json_encode($especialidades) ?>,
+                areas_atuacao: <?=json_encode($areas_atuacao) ?>,
                 dados: {
                     'nome_completo': '',
                     'cpf': '',
@@ -227,8 +284,9 @@
                     'plano_saude': '',
                     'email': '',
                     'telefone': '',
-                    'pais': '',
-                    'estado': '',
+                    'pais_id': 1,
+                    'estado_id': '',
+                    'nome_estado': '',
                     'cidade': '',
                     'cep': '',
                     'rua': '',
@@ -236,10 +294,12 @@
                     'numero': '',
                     'complemento': '',
                     'doencas_cronicas': '',
-                    'alergias': ''
-
+                    'alergias': '',
+                    'tipo_funcionario_id': '',
+                    'crm': '',
+                    'especialidade_id': '',
+                    'area_atuacao_id': ''
                 },
-                tipo_funcionario: 
                 errors: '',
             },
             methods: {

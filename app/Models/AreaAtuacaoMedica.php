@@ -5,9 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TipoFuncionario extends Model
+class AreaAtuacaoMedica extends Model
 {
     use HasFactory;
 
-    protected $table = "tipos_funcionarios";
+    protected $table = "areas_atuacao_medicas";
+
 }

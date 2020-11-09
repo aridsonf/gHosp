@@ -20,12 +20,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('/cadastro-paciente', function () {
-    return view('cadastro-paciente');
-
-});
-
-Route::get('/get-tipo-funcionario', 'App\Http\Controllers\TipoFuncionarioController@getTipoFuncionario');
+Route::get('/cadastro-paciente', 'App\Http\Controllers\PacienteController@carregarDados');
+Route::get('/cadastro-funcionario', 'App\Http\Controllers\FuncionarioController@carregarDados');
 
 
 Route::post('/cadastrar-paciente', 'App\Http\Controllers\UsuarioController@cadastrarPaciente');

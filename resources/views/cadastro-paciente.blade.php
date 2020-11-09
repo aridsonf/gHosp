@@ -128,22 +128,28 @@
                             <div class="form-group row">
                                 <label for="inputPais" class="col-sm-2 col-form-label td">País</label>
                                 <div class="col-md">
-                                    <input
-                                    type="text"
-                                    class="form-control"
-                                    id="inputPais"
-                                    placeholder=""
-                                    v-model="dados.pais"
-                                    />
+                                     <select v-model="dados.pais" class="form-control">
+                                        <option v-for="pais in paises" v-bind:value="pais.id">
+                                            @{{ pais.nome_pt }}
+                                        </option>
+                                    </select>
                                 </div>
+                                
                                 <label for="inputEstado" class="col-form-label td">Estado</label>
-                                <div class="col-md-3">
+                                <div v-if="dados.pais === 1" class="col-md" >
+                                     <select v-model="dados.estado_id" class="form-control">
+                                        <option v-for="estado in estados" v-bind:value="estado.id">
+                                            @{{ estado.nome }}
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3" v-if="dados.pais != 1">
                                     <input
                                     type="Text"
                                     class="form-control"
                                     id="inputEstado"
                                     placeholder=""
-                                    v-model="dados.estado"
+                                    v-model="dados.nome_estado"
                                     />
                                 </div>
                                 <label for="inputCidade" class="col-form-label td">Cidade</label>
@@ -310,6 +316,8 @@
                 urlBase: "{{ url('') }}",
                 checkAlergia: false,
                 checkDoenca: false,
+                estados: <?=json_encode($estados) ?>,
+                paises: <?=json_encode($paises) ?>,
                 dados: {
                     'nome_completo': '',
                     'cpf': '',
@@ -320,8 +328,9 @@
                     'plano_saude': '',
                     'email': '',
                     'telefone': '',
-                    'pais': '',
-                    'estado': '',
+                    'pais_id': 1,
+                    'estado_id': '',
+                    'nome_estado': '',
                     'cidade': '',
                     'cep': '',
                     'rua': '',
