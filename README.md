@@ -42,7 +42,7 @@ Format: ![Alt Text](url)
 
 ### 2.2.2 Descrição dos Casos de Uso
 
--   ##### Definir equipe
+-   #### Definir equipe
     -   **Descrição:** O Admnistrador deverá fazer a definição de equipe de funcionários.
     -   **Ator:** Admnistrador.
     -   **Pré-condições:**
@@ -61,7 +61,7 @@ Format: ![Alt Text](url)
         4. O Admnistrador será retornado para sua tela inicial.
     -   **Pós-condição:**
         -   Deverá ser registrado no sistema a equipe definida.
--   ##### Alocar Pacientes
+-   #### Alocar Pacientes
     -   **Descrição:** O Admnistrador deverá alocar o paciente na região do hospital especializada para a realização dos seus procedimentos necessários.
     -   **Ator:** Admnistrador.
     -   **Pré-Condições:**
@@ -77,7 +77,7 @@ Format: ![Alt Text](url)
     -   **Pós-Condição:**
         -   Deverá ser registrado no sistema os dados de alocamento do Paciente.
         -   O usuário da Admnistração será redirecionado para a sua tela principal.
--   ##### Realizar procedimentos
+-   #### Realizar procedimentos
     -   **Descrição:** O Paciente irá requerir a realização de procedimentos.
     -   **Ator:** Paciente.
     -   **Pré-Condição:**
@@ -94,7 +94,7 @@ Format: ![Alt Text](url)
         -   O Hospital terá que conter suporte para a realização do procedimento.
         -   Deverá ser registrado no sistema os procedimentos requeridos.
         -   O Paciente será redirecionado para sua página principal.
--   ##### Verificar cirurgias Marcadas
+-   #### Verificar cirurgias Marcadas
     -   **Descrição:** Irá disponibilizar os procedimentos a serem realizados pelo Médico ou Enfermeiro.
     -   **Atores:** Médico e Enfermeiro.
     -   **Pré-Condição:**
@@ -106,7 +106,7 @@ Format: ![Alt Text](url)
         3. O Sistema irá retornar a tela de cirurgia marcadas.
     -   **Pós-Condição:**
         -   O sistema deverá exibir uma página contendo os dados das cirurgias agendadas.
--   ##### Prescrever medicação
+-   #### Prescrever medicação
     -   **Descrição:** O Médico irá prescrever medicação a um Paciente.
     -   **Ator:** Médico.
     -   **Pré-Condição:**
@@ -119,7 +119,7 @@ Format: ![Alt Text](url)
         4. O Sistema confirmará se nenhuma medicação passada está conflitando com as alergias.
     -   **Pós-Condição:**
         -   O Sistema deverá disponibilizar para o Paciente, em sua tela principal, sua receita.
--   ##### Registrar Procedimento
+-   #### Registrar Procedimento
     -   **Descrição:** O administrativo irá registrar um novo procedimento a ser executado.
     -   **Ator:** Administração.
     -   **Pré-Condição:**
@@ -136,7 +136,7 @@ Format: ![Alt Text](url)
         2. Retorna ao fluxo principal.
     -   **Pós-Condição:**
         -   O sistema deverá disponibilizar para o Paciente e para as equipes o procedimentos pendentes, em suas respectivas telas de procedimentos.
--   ##### Cadastrar Usuário
+-   #### Cadastrar Usuário
     -   **Descrição:** O administrativo cadastrará um novo usuário.
     -   **Ator:** Administração.
     -   **Pré-Condição:**
@@ -151,7 +151,7 @@ Format: ![Alt Text](url)
         1. Caso o usuário já esteja cadastrado, o sistema enviar uma mensagem de erro ao ator.
         2. O sistema exibirá quais campos devem ser alterados para que o cadastro possa ser válido.
         3. O sistema retornará a tela de cadastro aguardando adequação dos dados de usuários para a realização do cadastro.
--   ##### Verificar Receituário
+-   #### Verificar Receituário
     -   **Descrição:** O paciente verificará seu receiturário.
     -   **Ator:** Paciente.
     -   **Pré-Condição:**
@@ -165,7 +165,7 @@ Format: ![Alt Text](url)
     -   **Fluxo alternativo:**
         1. Caso não haja receitas ativas o sistema informa ao Ator.
         2. Quando houver terminado alguma prescrição temporal executada por médicos, o sistema exibirá um histórico de receitas.
--   ##### Emitir Receita Médica
+-   #### Emitir Receita Médica
     -   **Descrição:**  O Médico irá emitir uma receita para um Paciente
     -   **Ator:** Médico.
     -   **Pré-Condições:**
@@ -174,7 +174,7 @@ Format: ![Alt Text](url)
             O Médico deverá ter Prescrevido a medicação do paciente.
     -   **Fluxo principal:**
         1. O Sistema irá emitir a receita médica ao Paciente.        
--   ##### Verificar Equipe
+-   #### Verificar Equipe
     -   **Descrição:**  O Ator poderá verificar a Equipe da qual faz parte.
     -   **Atores:** Médico e Enfermeiro
     -   **Pré-Condições:** 
@@ -187,7 +187,7 @@ Format: ![Alt Text](url)
     -   **Fluxo alternativo:**
         1. Caso o Ator não esteja em uma equipe o Sistema o informará.
         2. O Ator poderá retornar à sua tela principal.
--   ##### Consultar Ficha do Paciente
+-   #### Consultar Ficha do Paciente
     -   **Descrição:** O Ator irá consultar a ficha de um Paciente.
     -   **Ator:** Médico e Enfemeiro.
     -   **Pré-Condições:**
