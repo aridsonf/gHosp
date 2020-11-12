@@ -48,16 +48,16 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
         _ Haver um paciente que irá realizar um procedimento que necessitará de uma equipe.
         _ Haver funcionários disponiveis para formação de equipe.
     -   **Fluxo principal:**
-        a. O Admnistrador irá entrar no sistema 
-        b. O Admnistrador selecionará a opção de Definir Equipe.
-        c. O Sistema irá listar os profissionais disponíveis.
-        d. O Admnistrador definirá a equipe baseado nos requisitos do procedimento que esta irá realizar.
-        e. O Admnistrador será retornado para sua tela inicial.
+        1. O Admnistrador irá entrar no sistema 
+        2. O Admnistrador selecionará a opção de Definir Equipe.
+        3. O Sistema irá listar os profissionais disponíveis.
+        4. O Admnistrador definirá a equipe baseado nos requisitos do procedimento que esta irá realizar.
+        5. O Admnistrador será retornado para sua tela inicial.
     -   **Fluxo alternativo:**
-        a. O Sistema não encontra profissionais disponíveis.
-        b. O Sitema irá retornar uma mensagem para o Admnistrador.
-        c. O Admnistrador irá confirmar que recebeu a mensagem.
-        d. O Admnistrador será retornado para sua tela inicial.
+        1. O Sistema não encontra profissionais disponíveis.
+        2. O Sitema irá retornar uma mensagem para o Admnistrador.
+        3. O Admnistrador irá confirmar que recebeu a mensagem.
+        4. O Admnistrador será retornado para sua tela inicial.
     -   **Pós-condição:**
         -   Deverá ser registrado no sistema a equipe definida.
 -   #### Alocar Pacientes
@@ -100,9 +100,9 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
         -   O Ator deve estar cadastrado no sistema.
         -   O Ator deve estar em uma equipe.
     -   **Fluxo principal:**
-        a. O Ator irá abrir painel principal.
-        b. Através de um botão neste painel o Ator irá requerir suas cirurgias agendadas.
-        c. O Sistema irá retornar a tela de cirurgia marcadas.
+        1. O Ator irá abrir painel principal.
+        2. Através de um botão neste painel o Ator irá requerir suas cirurgias agendadas.
+        3. O Sistema irá retornar a tela de cirurgia marcadas.
     -   **Pós-Condição:**
         -   O sistema deverá exibir uma página contendo os dados das cirurgias agendadas.
 -   #### Prescrever medicação
@@ -112,10 +112,10 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
         -   Médico deverá estar na equipe destinada ao atendimento do procedimento do Paciente que estará a receber a prescição médica.
         -   Dados do paciente estarem preenchidos com possíveis alergias à medicações.
     -   **Fluxo principal:**
-        a. O Médico acessará sua lista de pacientes em seu painel principal.
-        b. O sistema deverá mostrar os dados do Paciente escolhido, incluindo as alergias.
-        c. O Médico prescreverá através de uma receita digital/física a medicação.
-        d. O sistema confirmará se nenhuma medicação passada está conflitando com as alergias.
+        1. O Médico acessará sua lista de pacientes em seu painel principal.
+        2. O sistema deverá mostrar os dados do Paciente escolhido, incluindo as alergias.
+        3. O Médico prescreverá através de uma receita digital/física a medicação.
+        4. O sistema confirmará se nenhuma medicação passada está conflitando com as alergias.
     -   **Pós-Condição:**
         -   O sistema deverá disponibilizar para o Paciente, em sua tela principal, sua receita.
 -   #### Emitir Receita Médica
