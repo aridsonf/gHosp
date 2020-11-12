@@ -169,16 +169,16 @@ Format: ![Alt Text](url)
     -   **Descrição:**  O Médico irá emitir uma receita para um Paciente
     -   **Ator:** Médico.
     -   **Pré-Condições:**
-            O Médico deverá estar em uma Equipe.
-            A Equipe deverá estar atrelada ao Paciente.
-            O Médico deverá ter Prescrevido a medicação do paciente.
+        -   O Médico deverá estar em uma Equipe.
+        -   A Equipe deverá estar atrelada ao Paciente.
+        -   O Médico deverá ter Prescrevido a medicação do paciente.
     -   **Fluxo principal:**
         1. O Sistema irá emitir a receita médica ao Paciente.        
 -   #### Verificar Equipe
     -   **Descrição:**  O Ator poderá verificar a Equipe da qual faz parte.
     -   **Atores:** Médico e Enfermeiro
     -   **Pré-Condições:** 
-            O Ator deverá estar cadastrado no sistema.
+        -   O Ator deverá estar cadastrado no sistema.
     -   **Fluxo principal:**
         1. O Ator acessará sua tela inicial.
         2. O Ator selecionará a opção Verificar Equipe.
@@ -191,8 +191,8 @@ Format: ![Alt Text](url)
     -   **Descrição:** O Ator irá consultar a ficha de um Paciente.
     -   **Ator:** Médico e Enfemeiro.
     -   **Pré-Condições:**
-            O Ator deverá estar em uma Equipe.
-            A Equipe deverá estar atrelada ao Paciente.
+        -   O Ator deverá estar em uma Equipe.
+        -   A Equipe deverá estar atrelada ao Paciente.
     -   **Fluxo principal:**
         1. O Ator acessará a sua tela inicial.
         2. O Ator selecionará a opção Consultar Ficha do Paciente.
