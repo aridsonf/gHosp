@@ -302,7 +302,12 @@
                             </fieldset>
                         </fieldset>
 
-                        <button @click="enviar()" class="btn btn-primary btn-lg btn-block">Enviar</button>
+                        <div class="form-group row ">
+                            <div class="col text-center">
+                                <button @click="enviar()" class="btn btn-light   shadow-sm">Enviar</button>
+                                <a href="/adm-lobby" class="btn btn-light shadow-sm">Voltar</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
