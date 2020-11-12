@@ -100,9 +100,9 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
         -   O Ator deve estar cadastrado no sistema.
         -   O Ator deve estar em uma equipe.
     -   **Fluxo principal:**
-        1. O Ator irá abrir painel principal.
-        2. Através de um botão neste painel o Ator irá requerir suas cirurgias agendadas.
-        3. O Sistema irá retornar a tela de cirurgia marcadas.
+        a. O Ator irá abrir painel principal.
+        b. Através de um botão neste painel o Ator irá requerir suas cirurgias agendadas.
+        c. O Sistema irá retornar a tela de cirurgia marcadas.
     -   **Pós-Condição:**
         -   O sistema deverá exibir uma página contendo os dados das cirurgias agendadas.
 -   #### Prescrever medicação
@@ -112,10 +112,10 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
         -   Médico deverá estar na equipe destinada ao atendimento do procedimento do Paciente que estará a receber a prescição médica.
         -   Dados do paciente estarem preenchidos com possíveis alergias à medicações.
     -   **Fluxo principal:**
-        1. O Médico acessará sua lista de pacientes em seu painel principal.
-        2. O sistema deverá mostrar os dados do Paciente escolhido, incluindo as alergias.
-        3. O Médico prescreverá através de uma receita digital/física a medicação.
-        4. O sistema confirmará se nenhuma medicação passada está conflitando com as alergias.
+        a. O Médico acessará sua lista de pacientes em seu painel principal.
+        b. O sistema deverá mostrar os dados do Paciente escolhido, incluindo as alergias.
+        c. O Médico prescreverá através de uma receita digital/física a medicação.
+        d. O sistema confirmará se nenhuma medicação passada está conflitando com as alergias.
     -   **Pós-Condição:**
         -   O sistema deverá disponibilizar para o Paciente, em sua tela principal, sua receita.
 -   #### Emitir Receita Médica
