@@ -94,7 +94,7 @@ Format: ![Alt Text](url)
         -   O Hospital terá que conter suporte para a realização do procedimento.
         -   Deverá ser registrado no sistema os procedimentos requeridos.
         -   O Paciente será redirecionado para sua página principal.
--   ##### Verificar cirurgias
+-   ##### Verificar cirurgias Marcadas
     -   **Descrição:** Irá disponibilizar os procedimentos a serem realizados pelo Médico ou Enfermeiro.
     -   **Atores:** Médico e Enfermeiro.
     -   **Pré-Condição:**
@@ -107,23 +107,23 @@ Format: ![Alt Text](url)
     -   **Pós-Condição:**
         -   O sistema deverá exibir uma página contendo os dados das cirurgias agendadas.
 -   ##### Prescrever medicação
-    -   **Descrição:** O Médico irá receitar medicações.
+    -   **Descrição:** O Médico irá prescrever medicação a um Paciente.
     -   **Ator:** Médico.
     -   **Pré-Condição:**
-        -   Médico deverá estar na equipe destinada ao atendimento do procedimento do Paciente que estará a receber a prescição médica.
+        -   Médico deverá estar na equipe atrelada ao Paciente.
         -   Dados do paciente estarem preenchidos com possíveis alergias à medicações.
     -   **Fluxo principal:**
         1. O Médico acessará sua lista de pacientes em seu painel principal.
-        2. O sistema deverá mostrar os dados do Paciente escolhido, incluindo as alergias.
-        3. O Médico prescreverá através de uma receita digital/física a medicação.
-        4. O sistema confirmará se nenhuma medicação passada está conflitando com as alergias.
+        2. O Sistema deverá mostrar os dados do Paciente escolhido, incluindo as alergias.
+        3. O Médico prescreverá através de uma receita digital a medicação.
+        4. O Sistema confirmará se nenhuma medicação passada está conflitando com as alergias.
     -   **Pós-Condição:**
-        -   O sistema deverá disponibilizar para o Paciente, em sua tela principal, sua receita.
+        -   O Sistema deverá disponibilizar para o Paciente, em sua tela principal, sua receita.
 -   ##### Registrar Procedimento
     -   **Descrição:** O administrativo irá registrar um novo procedimento a ser executado.
     -   **Ator:** Administração.
     -   **Pré-Condição:**
-        -   O administrador deverá estar logado no sistema.
+        -   O Administrador deverá estar logado no Sistema.
         -   Deverá constar requisições de pacientes para a realização de um novo procedimento.
         -   Dados do paciente estarem preenchidos com possíveis alergias à medicações.
     -   **Fluxo principal:**
@@ -140,7 +140,7 @@ Format: ![Alt Text](url)
     -   **Descrição:** O administrativo cadastrará um novo usuário.
     -   **Ator:** Administração.
     -   **Pré-Condição:**
-        -   O administrador deverá estar logado no sistema.
+        -   O administrador deve estar logado no sistema.
         -   Devem conter dados do usuário para realizar o cadastro.
     -   **Fluxo principal:**
         1. O ator acessará sua tela de cadastrar novo usuário.
@@ -151,45 +151,52 @@ Format: ![Alt Text](url)
         1. Caso o usuário já esteja cadastrado, o sistema enviar uma mensagem de erro ao ator.
         2. O sistema exibirá quais campos devem ser alterados para que o cadastro possa ser válido.
         3. O sistema retornará a tela de cadastro aguardando adequação dos dados de usuários para a realização do cadastro.
--   ##### Verificar Seu Receituário
+-   ##### Verificar Receituário
     -   **Descrição:** O paciente verificará seu receiturário.
     -   **Ator:** Paciente.
     -   **Pré-Condição:**
-        -   O paciente deverá estar cadastrado no sistema.
-        -   O paciente deverá possuir alguma receita ativa cadastrada por algum médico.
+        -   O paciente deve estar cadastrado no sistema.
+        -   O paciente deve possuir alguma receita ativa cadastrada por algum médico.
     -   **Fluxo principal:**
-        1. O ator acessará sua tela de receitas.
+        1. O Ator acessará sua tela de receitas.
         2. O sistema exibirá ao paciente as receitas ativas.
-        3. O ator selecionará uma receita para ver a sua composição e informações de bula.
-        4. O sistema buscará e informará ao ator as informações disponíveis.
+        3. O Ator selecionará uma receita para ver a sua composição e informações de bula.
+        4. O sistema buscará e informará ao Ator as informações disponíveis.
     -   **Fluxo alternativo:**
-        1. Caso não haja receitas ativas o sistema informa ao ator.
+        1. Caso não haja receitas ativas o sistema informa ao Ator.
         2. Quando houver terminado alguma prescrição temporal executada por médicos, o sistema exibirá um histórico de receitas.
 -   ##### Emitir Receita Médica
-    -   **Descrição:** 
+    -   **Descrição:**  O Médico irá emitir uma receita para um Paciente
     -   **Ator:** Médico.
     -   **Pré-Condições:**
+            O Médico deverá estar em uma Equipe.
+            A Equipe deverá estar atrelada ao Paciente.
+            O Médico deverá ter Prescrevido a medicação do paciente.
     -   **Fluxo principal:**
-    -   **Fluxo alternativo:**
-    -   **Pós-Condição:**
+        1. O Sistema irá emitir a receita médica ao Paciente.        
 -   ##### Verificar Equipe
-    -   **Descrição:** 
-    -   **Ator:** Médico e Enfermeiro
-    -   **Pré-Condições:**
+    -   **Descrição:**  O Ator poderá verificar a Equipe da qual faz parte.
+    -   **Atores:** Médico e Enfermeiro
+    -   **Pré-Condições:** 
+            O Ator deverá estar cadastrado no sistema.
     -   **Fluxo principal:**
+        1. O Ator acessará sua tela inicial.
+        2. O Ator selecionará a opção Verificar Equipe.
+        3. O Sistema retornará uma tela contendo as informações da equipe do Ator.
+        4. O Ator poderá retornar à sua tela principal.
     -   **Fluxo alternativo:**
-    -   **Pós-Condição:**
+        1. Caso o Ator não esteja em uma equipe o Sistema o informará.
+        2. O Ator poderá retornar à sua tela principal.
 -   ##### Consultar Ficha do Paciente
-    -   **Descrição:** 
+    -   **Descrição:** O Ator irá consultar a ficha de um Paciente.
     -   **Ator:** Médico e Enfemeiro.
     -   **Pré-Condições:**
+            O Ator deverá estar em uma Equipe.
+            A Equipe deverá estar atrelada ao Paciente.
     -   **Fluxo principal:**
+        1. O Ator acessará a sua tela inicial.
+        2. O Ator selecionará a opção Consultar Ficha do Paciente.
+        3. O Sistema irá retornar uma tela contendo a Ficha do Paciente.
     -   **Fluxo alternativo:**
-    -   **Pós-Condição:**
--   ##### Atualizar Cadastro
-    -   **Descrição:** 
-    -   **Ator:** Paciente.
-    -   **Pré-Condições:**
-    -   **Fluxo principal:**
-    -   **Fluxo alternativo:**
-    -   **Pós-Condição:**
+        1. Caso o Paciente não pussua ficha, o Sistema deverá informar ao Ator.
+
