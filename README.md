@@ -198,4 +198,38 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
         3. O Sistema irá retornar uma tela contendo a Ficha do Paciente.
     -   **Fluxo alternativo:**
         1. Caso o Paciente não pussua ficha, o Sistema deverá informar ao Ator.
-
+-   #### Realizar Pagamento
+    -   **Descrição:** O Ator realizar o pagamento de um procedimento.
+    -   **Ator:** Paciente.
+    -   **Pré-Condições:**
+        -   O Ator deve ter um procedimento com pendencia de pagamento.
+    -   **Fluxo principal:**
+        1. O Ator acessará a sua tela inicial.
+        2. O Ator selecionará a opção de procedimentos.
+        3. O Sistema descreverá os procedimentos com pagamento pendentes. 
+        3. O Ator seleciona um procedimento assim gerando uma cobrança a ser paga pelos meios disponíveis.
+    -   **Fluxo alternativo:**
+        1. Caso o pagamento não for possível pelos meios disponíveis, o ator deve entrar em contato com a administação.
+        2. O sistema deve encaminhar os contatos do setor de atendimento ao cliente.
+    -   **Pós-Condições:**
+        -   O Sistema adiciona ao perfil do ator o registro de pagamento.
+        -   O Sistema salva os dados de pagamento para validação do sertor de finanças.
+-   #### Atualizar Cadastro
+    -   **Descrição:** O Ator realizar o pagamento de um procedimento.
+    -   **Ator:** Paciente.
+    -   **Pré-Condições:**
+        -   O Ator estar com cadastro ativo no Sistema.
+    -   **Fluxo principal:**
+        1. O Ator acessará a sua tela inicial.
+        2. O Ator atualizar dados cadastrais.
+        3. O Sistema irá abrir a tela de cadastro para alteração dos dados do ator. 
+        3. O Sistema valida a alteração dos dados e os atualiza no banco de dados.
+    -   **Fluxo alternativo 1:**
+        1. Caso os dados não sejam válidos o sistema envia uma mensagem de alerta para o ator.
+        2. O sistema continua na tela de cadastro para atualização até os dados serem válidos.
+    -   **Fluxo alternativo 2:**
+        1. Caso os dados não sejam válidos o Ator pode solicitar para cancelar a alteração dos dados.
+        2. O Sistema cancela o envio de atualização e volta para a tela inicial do ator.
+    -   **Pós-Condições:**
+        -   O Sistema exibe uma mensagem de confirmação de alteração.
+        -   O Sistema redireciona o ator para sua tela inicial.
