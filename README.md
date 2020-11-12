@@ -37,18 +37,19 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
 
 ### 2.2.1 Diagrama de Casos de Uso
 
-![Diagrama de Casos de Uso](https://github.com/Sufilho/gHosp/blob/main/gHosp%20-%20Diagrama%20de%20Casos%20de%20Uso.png)
+![Diagrama de Casos de Uso](gHosp - Diagrama de Casos de Uso.png)
+Format: ![Alt Text](url)
 
 ### 2.2.2 Descrição dos Casos de Uso
 
--   #### Definir equipe
+-   ##### Definir equipe
     -   **Descrição:** O Admnistrador deverá fazer a definição de equipe de funcionários.
     -   **Ator:** Admnistrador.
     -   **Pré-condições:**
         _ Haver um paciente que irá realizar um procedimento que necessitará de uma equipe.
         _ Haver funcionários disponiveis para formação de equipe.
     -   **Fluxo principal:**
-        1. O Admnistrador irá entrar no Sistema 
+        1. O Admnistrador irá entrar no sistema 
         2. O Admnistrador selecionará a opção de Definir Equipe.
         3. O Sistema irá listar os profissionais disponíveis.
         4. O Admnistrador definirá a equipe baseado nos requisitos do procedimento que esta irá realizar.
@@ -59,28 +60,28 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
         3. O Admnistrador irá confirmar que recebeu a mensagem.
         4. O Admnistrador será retornado para sua tela inicial.
     -   **Pós-condição:**
-        -   Deverá ser registrado no Sistema a equipe definida.
--   #### Alocar Pacientes
+        -   Deverá ser registrado no sistema a equipe definida.
+-   ##### Alocar Pacientes
     -   **Descrição:** O Admnistrador deverá alocar o paciente na região do hospital especializada para a realização dos seus procedimentos necessários.
     -   **Ator:** Admnistrador.
     -   **Pré-Condições:**
-        -   O paciente deverá estar cadastrado no Sistema.
+        -   O paciente deverá estar cadastrado no sistema.
     -   **Fluxo principal:**
-        1. O Admnistrador irá entrar no Sistema.
+        1. O Admnistrador irá entrar no sistema.
         2. O Admnistrador selecionará a opção de Alocar Pacientes.
         3. O Sistema irá listar os Pacientes que ainda não foram alocados.
         4. O Admnistrador irá alocar os Pacientes de acordo com seus procedimentos.
         5. O Sistema irá retornar confirmando a alocação.
     -   **Fluxo alternativo:**
-        1. 
+        1. Falta de suporte ao procedimento: Caso não haja suporte para o procedimento do Paciente ele não será alocado.
     -   **Pós-Condição:**
-        -   O Sistema registrará os dados de alocamento do Paciente.
-        -   O Admnistrador será redirecionado para a sua tela principal.
--   #### Realizar procedimentos
+        -   Deverá ser registrado no sistema os dados de alocamento do Paciente.
+        -   O usuário da Admnistração será redirecionado para a sua tela principal.
+-   ##### Realizar procedimentos
     -   **Descrição:** O Paciente irá requerir a realização de procedimentos.
     -   **Ator:** Paciente.
     -   **Pré-Condição:**
-        -   O ator deverá estar cadastrado no Sistema.
+        -   O ator deverá estar cadastrado no sistema.
         -   O ator não deve apresentar pendências em pagamentos de procedimentos anteriores.
     -   **Fluxo principal:**
         1. O ator entrará em sua conta.
@@ -91,21 +92,21 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
         -   Caso não haja disponibilidade imediata para a realização do procedimento o Paciente deverá ser avisado e intrucionado a requerir seu procedimento para outra ocasião.
     -   **Pós-Condição:**
         -   O Hospital terá que conter suporte para a realização do procedimento.
-        -   Deverá ser registrado no Sistema os procedimentos requeridos.
+        -   Deverá ser registrado no sistema os procedimentos requeridos.
         -   O Paciente será redirecionado para sua página principal.
--   #### Verificar cirurgias
+-   ##### Verificar cirurgias
     -   **Descrição:** Irá disponibilizar os procedimentos a serem realizados pelo Médico ou Enfermeiro.
     -   **Atores:** Médico e Enfermeiro.
     -   **Pré-Condição:**
-        -   O Ator deve estar cadastrado no Sistema.
+        -   O Ator deve estar cadastrado no sistema.
         -   O Ator deve estar em uma equipe.
     -   **Fluxo principal:**
         1. O Ator irá abrir painel principal.
         2. Através de um botão neste painel o Ator irá requerir suas cirurgias agendadas.
         3. O Sistema irá retornar a tela de cirurgia marcadas.
     -   **Pós-Condição:**
-        -   O Sistema deverá exibir uma página contendo os dados das cirurgias agendadas.
--   #### Prescrever medicação
+        -   O sistema deverá exibir uma página contendo os dados das cirurgias agendadas.
+-   ##### Prescrever medicação
     -   **Descrição:** O Médico irá receitar medicações.
     -   **Ator:** Médico.
     -   **Pré-Condição:**
@@ -113,51 +114,82 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
         -   Dados do paciente estarem preenchidos com possíveis alergias à medicações.
     -   **Fluxo principal:**
         1. O Médico acessará sua lista de pacientes em seu painel principal.
-        2. O Sistema deverá mostrar os dados do Paciente escolhido, incluindo as alergias.
+        2. O sistema deverá mostrar os dados do Paciente escolhido, incluindo as alergias.
         3. O Médico prescreverá através de uma receita digital/física a medicação.
-        4. O Sistema confirmará se nenhuma medicação passada está conflitando com as alergias.
+        4. O sistema confirmará se nenhuma medicação passada está conflitando com as alergias.
     -   **Pós-Condição:**
-        -   O Sistema deverá disponibilizar para o Paciente, em sua tela principal, sua receita.
--   #### Emitir Receita Médica
+        -   O sistema deverá disponibilizar para o Paciente, em sua tela principal, sua receita.
+-   ##### Registrar Procedimento
+    -   **Descrição:** O administrativo irá registrar um novo procedimento a ser executado.
+    -   **Ator:** Administração.
+    -   **Pré-Condição:**
+        -   O administrador deverá estar logado no sistema.
+        -   Deverá constar requisições de pacientes para a realização de um novo procedimento.
+        -   Dados do paciente estarem preenchidos com possíveis alergias à medicações.
+    -   **Fluxo principal:**
+        1. O ator acessará sua lista de pacientes requisitando um novo procedimento em sua tela de procedimentos.
+        2. O sistema deverá mostrar os dados do Paciente escolhido, incluindo as alergias.
+        3. O ator envia os dados para registrar um novo procedimento. 
+        4. O sistema confirmará com o ator se os dados estão corretos sem faltas de dados obrigatórios e registra o novo procedimento.
+    -   **Fluxo alternativo:**
+        1. Caso haja um procedimento marcado para mesma data ou local, o sistema exibe um alerta informando ao ator.
+        2. Retorna ao fluxo principal.
+    -   **Pós-Condição:**
+        -   O sistema deverá disponibilizar para o Paciente e para as equipes o procedimentos pendentes, em suas respectivas telas de procedimentos.
+-   ##### Cadastrar Usuário
+    -   **Descrição:** O administrativo cadastrará um novo usuário.
+    -   **Ator:** Administração.
+    -   **Pré-Condição:**
+        -   O administrador deverá estar logado no sistema.
+        -   Devem conter dados do usuário para realizar o cadastro.
+    -   **Fluxo principal:**
+        1. O ator acessará sua tela de cadastrar novo usuário.
+        2. O ator insere os dados, junto com o tipo determinado seja ele médico, enfermeiro, amdinistrador ou paciente.
+        3. O sistema faz uma validação dos tipos de dados, e realiza a inserção de um novo usuário.
+        4. O sistema confirmará o novo cadastro realizado com sucesso.
+    -   **Fluxo alternativo:**
+        1. Caso o usuário já esteja cadastrado, o sistema enviar uma mensagem de erro ao ator.
+        2. O sistema exibirá quais campos devem ser alterados para que o cadastro possa ser válido.
+        3. O sistema retornará a tela de cadastro aguardando adequação dos dados de usuários para a realização do cadastro.
+-   ##### Verificar Seu Receituário
+    -   **Descrição:** O paciente verificará seu receiturário.
+    -   **Ator:** Paciente.
+    -   **Pré-Condição:**
+        -   O paciente deverá estar cadastrado no sistema.
+        -   O paciente deverá possuir alguma receita ativa cadastrada por algum médico.
+    -   **Fluxo principal:**
+        1. O ator acessará sua tela de receitas.
+        2. O sistema exibirá ao paciente as receitas ativas.
+        3. O ator selecionará uma receita para ver a sua composição e informações de bula.
+        4. O sistema buscará e informará ao ator as informações disponíveis.
+    -   **Fluxo alternativo:**
+        1. Caso não haja receitas ativas o sistema informa ao ator.
+        2. Quando houver terminado alguma prescrição temporal executada por médicos, o sistema exibirá um histórico de receitas.
+-   ##### Emitir Receita Médica
     -   **Descrição:** 
     -   **Ator:** Médico.
     -   **Pré-Condições:**
     -   **Fluxo principal:**
     -   **Fluxo alternativo:**
     -   **Pós-Condição:**
--   #### Verificar Equipe
+-   ##### Verificar Equipe
     -   **Descrição:** 
     -   **Ator:** Médico e Enfermeiro
     -   **Pré-Condições:**
     -   **Fluxo principal:**
     -   **Fluxo alternativo:**
     -   **Pós-Condição:**
--   #### Consultar Ficha do Paciente
+-   ##### Consultar Ficha do Paciente
     -   **Descrição:** 
     -   **Ator:** Médico e Enfemeiro.
     -   **Pré-Condições:**
     -   **Fluxo principal:**
     -   **Fluxo alternativo:**
     -   **Pós-Condição:**
--   #### Atualizar Cadastro
+-   ##### Atualizar Cadastro
     -   **Descrição:** 
     -   **Ator:** Paciente.
     -   **Pré-Condições:**
     -   **Fluxo principal:**
     -   **Fluxo alternativo:**
     -   **Pós-Condição:**
--   #### Registrar Procedimento
-    -   **Descrição:** 
-    -   **Ator:** Admnistrador.
-    -   **Pré-Condições:**
-    -   **Fluxo principal:**
-    -   **Fluxo alternativo:**
-    -   **Pós-Condição:**
--   #### Verificar Receituário
-    -   **Descrição:** 
-    -   **Ator:** Admnistrador.
-    -   **Pré-Condições:**
-    -   **Fluxo principal:**
-    -   **Fluxo alternativo:**
-    -   **Pós-Condição:**
-
