@@ -48,16 +48,16 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
         _ Haver um paciente que irá realizar um procedimento que necessitará de uma equipe.
         _ Haver funcionários disponiveis para formação de equipe.
     -   **Fluxo principal:**
-        1. O Admnistrador irá entrar no sistema 
-        2. O Admnistrador selecionará a opção de Definir Equipe.
-        3. O Sistema irá listar os profissionais disponíveis.
-        4. O Admnistrador definirá a equipe baseado nos requisitos do procedimento que esta irá realizar.
-        5. O Admnistrador será retornado para sua tela inicial.
+        a. O Admnistrador irá entrar no sistema 
+        b. O Admnistrador selecionará a opção de Definir Equipe.
+        c. O Sistema irá listar os profissionais disponíveis.
+        d. O Admnistrador definirá a equipe baseado nos requisitos do procedimento que esta irá realizar.
+        e. O Admnistrador será retornado para sua tela inicial.
     -   **Fluxo alternativo:**
-        1. O Sistema não encontra profissionais disponíveis.
-        2. O Sitema irá retornar uma mensagem para o Admnistrador.
-        3. O Admnistrador irá confirmar que recebeu a mensagem.
-        4. O Admnistrador será retornado para sua tela inicial.
+        a. O Sistema não encontra profissionais disponíveis.
+        b. O Sitema irá retornar uma mensagem para o Admnistrador.
+        c. O Admnistrador irá confirmar que recebeu a mensagem.
+        d. O Admnistrador será retornado para sua tela inicial.
     -   **Pós-condição:**
         -   Deverá ser registrado no sistema a equipe definida.
 -   #### Alocar Pacientes
@@ -66,17 +66,16 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
     -   **Pré-Condições:**
         -   O paciente deverá estar cadastrado no sistema.
     -   **Fluxo principal:**
-        . O Admnistrador irá entrar no sistema.
-        . O Admnistrador selecionará a opção de Alocar Pacientes.
-        . O Sistema irá listar os Pacientes que ainda não foram alocados.
-        . O Admnistrador irá alocar os Pacientes de acordo com seus procedimentos.
-        . O Sistema irá retornar confirmando a alocação.
-        . O Admnistraddor será redirecionado para a sua tela inicial.
+        a. O Admnistrador irá entrar no sistema.
+        b. O Admnistrador selecionará a opção de Alocar Pacientes.
+        c. O Sistema irá listar os Pacientes que ainda não foram alocados.
+        d. O Admnistrador irá alocar os Pacientes de acordo com seus procedimentos.
+        e. O Sistema irá retornar confirmando a alocação.
     -   **Fluxo alternativo:**
-        1. Falta de suporte ao procedimento: Caso não haja suporte para o procedimento do Paciente ele não será alocado.
+        1. 
     -   **Pós-Condição:**
-        -   Deverá ser registrado no sistema os dados de alocamento do Paciente.
-        -   O usuário da Admnistração será redirecionado para a sua tela principal.
+        -   O Sistema registrará os dados de alocamento do Paciente.
+        -   O Admnistrador será redirecionado para a sua tela principal.
 -   #### Realizar procedimentos
     -   **Descrição:** O Paciente irá requerir a realização de procedimentos.
     -   **Ator:** Paciente.
