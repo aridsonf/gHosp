@@ -48,7 +48,7 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
         _ Haver um paciente que irá realizar um procedimento que necessitará de uma equipe.
         _ Haver funcionários disponiveis para formação de equipe.
     -   **Fluxo principal:**
-        1. O Admnistrador irá entrar no sistema 
+        1. O Admnistrador irá entrar no Sistema 
         2. O Admnistrador selecionará a opção de Definir Equipe.
         3. O Sistema irá listar os profissionais disponíveis.
         4. O Admnistrador definirá a equipe baseado nos requisitos do procedimento que esta irá realizar.
@@ -59,14 +59,14 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
         3. O Admnistrador irá confirmar que recebeu a mensagem.
         4. O Admnistrador será retornado para sua tela inicial.
     -   **Pós-condição:**
-        -   Deverá ser registrado no sistema a equipe definida.
+        -   Deverá ser registrado no Sistema a equipe definida.
 -   #### Alocar Pacientes
     -   **Descrição:** O Admnistrador deverá alocar o paciente na região do hospital especializada para a realização dos seus procedimentos necessários.
     -   **Ator:** Admnistrador.
     -   **Pré-Condições:**
-        -   O paciente deverá estar cadastrado no sistema.
+        -   O paciente deverá estar cadastrado no Sistema.
     -   **Fluxo principal:**
-        1. O Admnistrador irá entrar no sistema.
+        1. O Admnistrador irá entrar no Sistema.
         2. O Admnistrador selecionará a opção de Alocar Pacientes.
         3. O Sistema irá listar os Pacientes que ainda não foram alocados.
         4. O Admnistrador irá alocar os Pacientes de acordo com seus procedimentos.
@@ -80,7 +80,7 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
     -   **Descrição:** O Paciente irá requerir a realização de procedimentos.
     -   **Ator:** Paciente.
     -   **Pré-Condição:**
-        -   O ator deverá estar cadastrado no sistema.
+        -   O ator deverá estar cadastrado no Sistema.
         -   O ator não deve apresentar pendências em pagamentos de procedimentos anteriores.
     -   **Fluxo principal:**
         1. O ator entrará em sua conta.
@@ -91,20 +91,20 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
         -   Caso não haja disponibilidade imediata para a realização do procedimento o Paciente deverá ser avisado e intrucionado a requerir seu procedimento para outra ocasião.
     -   **Pós-Condição:**
         -   O Hospital terá que conter suporte para a realização do procedimento.
-        -   Deverá ser registrado no sistema os procedimentos requeridos.
+        -   Deverá ser registrado no Sistema os procedimentos requeridos.
         -   O Paciente será redirecionado para sua página principal.
 -   #### Verificar cirurgias
     -   **Descrição:** Irá disponibilizar os procedimentos a serem realizados pelo Médico ou Enfermeiro.
     -   **Atores:** Médico e Enfermeiro.
     -   **Pré-Condição:**
-        -   O Ator deve estar cadastrado no sistema.
+        -   O Ator deve estar cadastrado no Sistema.
         -   O Ator deve estar em uma equipe.
     -   **Fluxo principal:**
         1. O Ator irá abrir painel principal.
         2. Através de um botão neste painel o Ator irá requerir suas cirurgias agendadas.
         3. O Sistema irá retornar a tela de cirurgia marcadas.
     -   **Pós-Condição:**
-        -   O sistema deverá exibir uma página contendo os dados das cirurgias agendadas.
+        -   O Sistema deverá exibir uma página contendo os dados das cirurgias agendadas.
 -   #### Prescrever medicação
     -   **Descrição:** O Médico irá receitar medicações.
     -   **Ator:** Médico.
@@ -113,11 +113,11 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
         -   Dados do paciente estarem preenchidos com possíveis alergias à medicações.
     -   **Fluxo principal:**
         1. O Médico acessará sua lista de pacientes em seu painel principal.
-        2. O sistema deverá mostrar os dados do Paciente escolhido, incluindo as alergias.
+        2. O Sistema deverá mostrar os dados do Paciente escolhido, incluindo as alergias.
         3. O Médico prescreverá através de uma receita digital/física a medicação.
-        4. O sistema confirmará se nenhuma medicação passada está conflitando com as alergias.
+        4. O Sistema confirmará se nenhuma medicação passada está conflitando com as alergias.
     -   **Pós-Condição:**
-        -   O sistema deverá disponibilizar para o Paciente, em sua tela principal, sua receita.
+        -   O Sistema deverá disponibilizar para o Paciente, em sua tela principal, sua receita.
 -   #### Emitir Receita Médica
     -   **Descrição:** 
     -   **Ator:** Médico.
