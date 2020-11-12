@@ -1,6 +1,9 @@
 .td {
     text-align: right;
 }
+.tc {
+    text-align: center;
+}
 .bg-gainsboro {
     background-color: #dcdcdc !important;
 }

@@ -3,6 +3,7 @@
 @section('conteudo')
 <div id="adm" class="conteiner-fluid ">
         <div class="card border-dark mb-3 ">
+          <div class="card-header text-center"">
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
   <a class="navbar-brand" href="#">gHosp</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +26,12 @@
       </li>
     </ul>
   </div>
+
 </nav>
+</div>
+            <div class="card-body text-dark bg-dark">
+                <img src="{{ asset('img/fundo.jpg') }}" class="img-fluid" alt="Responsive image"> 
+</div>
 </div>
 </div>
 
