@@ -66,11 +66,11 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
     -   **Pré-Condições:**
         -   O paciente deverá estar cadastrado no sistema.
     -   **Fluxo principal:**
-        a. O Admnistrador irá entrar no sistema.
-        b. O Admnistrador selecionará a opção de Alocar Pacientes.
-        c. O Sistema irá listar os Pacientes que ainda não foram alocados.
-        d. O Admnistrador irá alocar os Pacientes de acordo com seus procedimentos.
-        e. O Sistema irá retornar confirmando a alocação.
+        1. O Admnistrador irá entrar no sistema.
+        2. O Admnistrador selecionará a opção de Alocar Pacientes.
+        3. O Sistema irá listar os Pacientes que ainda não foram alocados.
+        4. O Admnistrador irá alocar os Pacientes de acordo com seus procedimentos.
+        5. O Sistema irá retornar confirmando a alocação.
     -   **Fluxo alternativo:**
         1. 
     -   **Pós-Condição:**
