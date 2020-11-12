@@ -110,3 +110,49 @@ Format: ![Alt Text](url)
         4. O sistema confirmará se nenhuma medicação passada está conflitando com as alergias.
     -   **Pós-Condição:**
         -   O sistema deverá disponibilizar para o Paciente, em sua tela principal, sua receita.
+-   ##### Registrar Procedimento
+    -   **Descrição:** O administrativo irá registrar um novo procedimento a ser executado.
+    -   **Ator:** Administração.
+    -   **Pré-Condição:**
+        -   O administrador deverá estar logado no sistema.
+        -   Deverá constar requisições de pacientes para a realização de um novo procedimento.
+        -   Dados do paciente estarem preenchidos com possíveis alergias à medicações.
+    -   **Fluxo principal:**
+        1. O ator acessará sua lista de pacientes requisitando um novo procedimento em sua tela de procedimentos.
+        2. O sistema deverá mostrar os dados do Paciente escolhido, incluindo as alergias.
+        3. O ator envia os dados para registrar um novo procedimento. 
+        4. O sistema confirmará com o ator se os dados estão corretos sem faltas de dados obrigatórios e registra o novo procedimento.
+    -   **Fluxo alternativo:**
+        1. Caso haja um procedimento marcado para mesma data ou local, o sistema exibe um alerta informando ao ator.
+        2. Retorna ao fluxo principal.
+    -   **Pós-Condição:**
+        -   O sistema deverá disponibilizar para o Paciente e para as equipes o procedimentos pendentes, em suas respectivas telas de procedimentos.
+-   ##### Cadastrar Usuário
+    -   **Descrição:** O administrativo cadastrará um novo usuário.
+    -   **Ator:** Administração.
+    -   **Pré-Condição:**
+        -   O administrador deverá estar logado no sistema.
+        -   Devem conter dados do usuário para realizar o cadastro.
+    -   **Fluxo principal:**
+        1. O ator acessará sua tela de cadastrar novo usuário.
+        2. O ator insere os dados, junto com o tipo determinado seja ele médico, enfermeiro, amdinistrador ou paciente.
+        3. O sistema faz uma validação dos tipos de dados, e realiza a inserção de um novo usuário.
+        4. O sistema confirmará o novo cadastro realizado com sucesso.
+    -   **Fluxo alternativo:**
+        1. Caso haja um usuário já esteja cadastrado, o sistema enviar uma mensagem de erro ao ator.
+        2. O sistema exibe quais campos devem ser alterados para que o cadastro possa ser válido.
+        3. O sistema retorna a tela de cadastro aguardando adequação dos dados de usuários para a realização do cadastro.
+-   ##### Verificar Seu Receituário
+    -   **Descrição:** O paciente verificará seu receiturário.
+    -   **Ator:** Paciente.
+    -   **Pré-Condição:**
+        -   O paciente deverá estar cadastrado no sistema.
+        -   O paciente deverá estar alguma receita ativa cadastrada por algum médico.
+    -   **Fluxo principal:**
+        1. O ator acessará sua tela de receitas.
+        2. O sistema exibe ao paciente as receitas ativas.
+        3. O ator seleciona uma receita para ver a sua composição e informações de bula.
+        4. O sistema busca e informa ao ator as informações disponíveis.
+    -   **Fluxo alternativo:**
+        1. Caso não haja receita ativas o sistema informa ao ator.
+        2. Quando houver terminado alguma prescrição temporal executada por médicos, o sistema pode exibir um histórico de receitas.
