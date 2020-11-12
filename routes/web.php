@@ -26,6 +26,8 @@ Route::get('/cadastro-funcionario', 'App\Http\Controllers\FuncionarioController@
 
 Route::post('/cadastrar-paciente', 'App\Http\Controllers\CadastroController@cadastrarPaciente');
 
+Route::get('/adm-cadastro', 'App\Http\Controllers\AdmCadastroController@admCadastro');
+Route::get('/adm-login', 'App\Http\Controllers\AdmLoginController@admLogin');
 // Route::get('/cadastrar-paciente', 'App\Http\Controllers\PatientController@registerPatient');
 
 // Route::get('/cadastrar-profissional', 'App\Http\Controllers\ProfissionalController@registerProfissional');
