@@ -1,6 +1,7 @@
 @extends('template.app')
 
 @section('conteudo')
+
 <div id="adm" class="conteiner-fluid ">
         <div class="card border-dark mb-3 ">
           <div class="card-header text-center"">
@@ -24,13 +25,19 @@
           <a class="dropdown-item" href="/cadastro-paciente">Cadastrar Paciente</a>
         </div>
       </li>
+      <li>
+        <form>
+          <a type="submit" class="btn btn-dark align-right" href="/adm-login">Sair</a>
+        </form>
+      </li>
     </ul>
   </div>
 
 </nav>
 </div>
-            <div class="card-body text-dark bg-dark">
-                <img src="{{ asset('img/fundo.jpg') }}" class="img-fluid" alt="Responsive image"> 
+            <div class="card-body text-dark imgbg">
+
+                <img src="{{ asset('img/consu2.jpg') }}" class="img-fluid" style="width: 100% \9" alt="Responsive image"> 
 </div>
 </div>
 </div>

@@ -7,6 +7,15 @@
 .bg-gainsboro {
     background-color: #dcdcdc !important;
 }
+.btn-logout {
+    width: 100%;
+    padding: 3px 20px !important;
+    text-align: left !important;
+}
+.imgbg {
+    background-image: url("{{ asset('img/consu2.jpg') }}");
+    background-color: #cccccc;
+}
 /* Links inside the navbar */
 
 /* The dropdown container */

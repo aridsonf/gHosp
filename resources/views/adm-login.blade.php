@@ -11,7 +11,7 @@
     <div class="form-group">
         <input type="password" class="form-control mx-auto" style="width: 400px" id="inputPassword" placeholder="Password">
     </div>
-    <button type="submit" class="btn btn-light">Login</button>
+    <a type="submit" href="/adm-lobby" class="btn btn-light">Login</a>
     </div>
 </div>
 
