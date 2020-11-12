@@ -46,8 +46,8 @@ Format: ![Alt Text](url)
     -   **Descrição:** O Admnistrador deverá fazer a definição de equipe de funcionários.
     -   **Ator:** Admnistrador.
     -   **Pré-condições:**
-        _ Haver um paciente que irá realizar um procedimento que necessitará de uma equipe.
-        _ Haver funcionários disponiveis para formação de equipe.
+        - Haver um paciente que irá realizar um procedimento que necessitará de uma equipe.
+        - Haver funcionários disponiveis para formação de equipe.
     -   **Fluxo principal:**
         1. O Admnistrador irá entrar no sistema 
         2. O Admnistrador selecionará a opção de Definir Equipe.
