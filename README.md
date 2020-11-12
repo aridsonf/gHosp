@@ -37,8 +37,7 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
 
 ### 2.2.1 Diagrama de Casos de Uso
 
-![Diagrama de Casos de Uso](gHosp - Diagrama de Casos de Uso.png)
-Format: ![Alt Text](url)
+![Diagrama de Casos de Uso](https://github.com/aridsonf/gHosp/blob/main/gHosp%20-%20Diagrama%20de%20Casos%20de%20Uso.png)
 
 ### 2.2.2 Descrição dos Casos de Uso
 
