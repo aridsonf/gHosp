@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Paciente;
+use App\Models\Funcionario;
+use App\Models\Medico;
+use App\Models\Enfermeiro;
+use App\Models\Administrador;
 use App\Models\Endereco;
 use App\Models\Pais;
 use App\Models\Estados;
@@ -54,5 +58,82 @@ class CadastroController extends Controller
         $paciente->save();
 
         return 'Paciente Cadastrado com Sucesso!';
+    }
+
+    public function cadastrarFuncionario(Request $request)
+    {
+        // dd($request)->all();
+
+        $endereco = new Endereco();
+
+        
+        $endereco->pais_id = $request->pais;
+        if($request->pais == 1){
+            $endereco->estado_id = $request->estado_id;
+            $endereco->nome_estado = "";
+        } else {
+            $endereco->estado_id = "";
+            $endereco->nome_estado = $request->nome_estado;
+        }
+        
+        $endereco->cidade = $request->cidade;
+        $endereco->cep = $request->cep;
+        $endereco->rua = $request->rua;
+        $endereco->bairro = $request->bairro;
+        $endereco->numero = $request->numero;
+        $endereco->complemento = $request->complemento;
+
+        $endereco->save();
+
+        $funcionario = new Funcionario();
+
+        $funcionario->cpf = $request->cpf;
+        $funcionario->nome  = $request->nome_completo;
+        $funcionario->data_nascimento = $request->data_nascimento;
+        $funcionario->orgao_expedidor = $request->orgao_expedidor;
+        $funcionario->identidade = $request->identidade;
+        $funcionario->sexo = $request->sexo;
+        $funcionario->email = $request->email;
+        $funcionario->telefone = $request->telefone;
+        $funcionario->endereco_id = $endereco->id;
+
+        $funcionario->tipo_funcionario_id = $request->tipo_funcionario_id;
+
+        $funcionario->save();
+
+        if ($request->tipo_funcionario_id == 1){
+            $medico = new Medico();
+
+            $medico->crm = $request->medico['crm'];
+            $medico->especialidade_id = $request->medico['especialidade_id'];
+            $medico->area_atuacao_id = $request->medico['area_atuacao_id'];
+            $medico->tipo_funcionario_id = $request->tipo_funcionario_id;
+            $medico->funcionario_id = $funcionario->id;
+            
+            $medico->save();
+
+        }
+
+        if ($request->tipo_funcionario_id == 2){
+            $enfermeiro = new Enfermeiro();
+
+            $enfermeiro->coren = $request->enfermeiro['coren'];
+            $enfermeiro->tipo_funcionario_id = $request->tipo_funcionario_id;
+            $enfermeiro->funcionario_id = $funcionario->id;
+
+            $enfermeiro->save();
+
+        }
+
+        if ($request->tipo_funcionario_id == 3){
+            $administrador = new Administrador();
+
+            $administrador->tipo_funcionario_id = $request->tipo_funcionario_id;
+            $administrador->funcionario_id = $funcionario->id;
+
+            $administrador->save();
+
+        }
+        return 'Funcionario Cadastrado com Sucesso!';
     }
 }

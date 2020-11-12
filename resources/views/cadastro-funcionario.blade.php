@@ -228,7 +228,7 @@
                                         class="form-control"
                                         name="crmMedico"
                                         id="crmMedico"
-                                        v-model="dados.crm"
+                                        v-model="dados.medico.crm"
                                         />
                                     </div>
                                 </div>
@@ -236,7 +236,7 @@
                                 <div class="form-group row">
                                     <label for="especialidadeMedico" class="col-sm-2 col-form-label td">Especialidade</label>
                                     <div class="col-sm-4">
-                                        <select v-model="dados.especialidade_id" class="form-control">
+                                        <select v-model="dados.medico.especialidade_id" class="form-control">
                                             <option v-for="especialidade in especialidades" v-bind:value="especialidade.id">
                                                 @{{ especialidade.nome_especialidade }}
                                             </option>
@@ -245,11 +245,27 @@
 
                                     <label for="areaAtuacaoMedico" class="col-sm-2 col-form-label td">Área de Atuação</label>
                                     <div class="col-sm-4">
-                                        <select v-model="dados.area_atuacao_id" class="form-control">
-                                            <option v-for="area_atuacao in areas_atuacao" v-bind:value="areas_atuacao.id">
+                                        <select v-model="dados.medico.area_atuacao_id" class="form-control">
+                                            <option v-for="area_atuacao in areas_atuacao" v-bind:value="area_atuacao.id">
                                                 @{{ area_atuacao.nome_area_atuacao }}
                                             </option>
                                         </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div v-else-if="dados.tipo_funcionario_id === 2">
+
+                                <div class="form-group row">
+                                    <label for="corenEnfermeiro" class="col-sm-2 col-form-label td">COREN</label>
+                                    <div class="col-sm-10">
+                                        <input
+                                        type="text"
+                                        class="form-control"
+                                        name="corenEnfermeiro"
+                                        id="corenEnfermeiro"
+                                        v-model="dados.enfermeiro.coren"
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -281,7 +297,6 @@
                     'orgao_expedidor': '',
                     'identidade': '',
                     'sexo': '',
-                    'plano_saude': '',
                     'email': '',
                     'telefone': '',
                     'pais_id': 1,
@@ -293,12 +308,16 @@
                     'bairro': '',
                     'numero': '',
                     'complemento': '',
-                    'doencas_cronicas': '',
-                    'alergias': '',
                     'tipo_funcionario_id': '',
-                    'crm': '',
-                    'especialidade_id': '',
-                    'area_atuacao_id': ''
+                    'enfermeiro': {
+                        'coren': ''
+                    },
+                    'medico': {
+                        'crm': '',
+                        'especialidade_id': '',
+                        'area_atuacao_id': ''
+                    },
+                    'administrador': {},
                 },
                 errors: '',
             },
@@ -307,24 +326,14 @@
                     return (!str || 0 === str.length || /^\s*$/.test(str) || str == 0);
                 },
                 enviar: function() {
-                    this.errors = [];
-                    if (this.idEmpty(this.dados.nome_completo)) {
-                        this.errors.push('O Nome Completo é obrigatório.');
-                    }
-                    if (this.idEmpty(this.dados.cpf)) {
-                        this.errors.push('O CPF é obrigatório.');
-                    }
+                    url = this.urlBase + '/cadastrar-funcionario';
 
-                    if (this.errors.length > 0) {
-                        return false;
-                    }
-
-                    //
-                    url = this.urlBase + '/cadastrar-paciente';
+                    // console.log(this.dados);
+                   
 
                     this.$http.post(url, this.dados).then(response => {
                         if (response.status == 200) {
-                            Swal.fire('Paciente cadastrado com sucesso!', '', 'success');
+                            Swal.fire('Funcionário cadastrado com sucesso!', '', 'success');
                         } else {
                             Swal.fire({
                                 icon: 'error',
