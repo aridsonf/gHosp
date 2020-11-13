@@ -337,6 +337,7 @@
 
                     this.$http.post(url, this.dados).then(response => {
                         if (response.status == 200) {
+                            this.limparCampos();
                             Swal.fire('Funcionário cadastrado com sucesso!', '', 'success');
                         } else {
                             Swal.fire({
@@ -348,6 +349,32 @@
                         }
                     });
                     
+                },
+                limparCampos: function() {
+                    this.dados.nome_completo = "";
+                    this.dados.cpf = "";
+                    this.dados.data_nascimento = "";
+                    this.dados.orgao_expedidor = "";
+                    this.dados.identidade = "";
+                    this.dados.sexo = "";
+                    this.dados.email = "";
+                    this.dados.telefone = "";
+                    this.dados.pais_id = 1;
+                    this.dados.estado_id = "";
+                    this.dados.nome_estado = "";
+                    this.dados.cidade = "";
+                    this.dados.cep = "";
+                    this.dados.rua = "";
+                    this.dados.bairro = "";
+                    this.dados.numero = "";
+                    this.dados.complemento = "";
+                    this.dados.tipo_funcionario_id = "";
+
+                    this.dados.medico.crm = "";
+                    this.dados.medico.especialidade_id = "";
+                    this.dados.medico.area_atuacao_id = "";
+
+                    this.dados.enfermeiro.coren = "";
                 }
             },
             filters: {
