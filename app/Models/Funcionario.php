@@ -15,4 +15,5 @@ class Funcionario extends Model
     
     public function hasEndereco() { return $this->hasOne('App\Model\Endereco', 'id_endereco', 'endereco_id'); }
     public function hasTipoFuncionario() { return $this->hasOne('App\Model\TipoFuncionario', 'id', 'tipo_funcionario_id'); }
+    public function hasEquipe() { return $this->hasMany('App\Model\Equipe', 'id_chefe', 'id_funcionario'); }
 }
