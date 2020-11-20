@@ -11,6 +11,11 @@ use App\Models\Administrador;
 use App\Models\Endereco;
 use App\Models\Pais;
 use App\Models\Estados;
+use App\Models\Procedimento;
+use App\Models\Consulta;
+use App\Models\Cirurgia;
+use App\Models\Exame;
+use App\Models\Equipe;
 
 class CadastroController extends Controller
 {
@@ -135,5 +140,50 @@ class CadastroController extends Controller
 
         }
         return 'Funcionario Cadastrado com Sucesso!';
+    }
+
+    public function registrarProcedimento(Request $request)
+    {
+        $procedimento = new Procedimento();
+
+        $procedimento->data_procedimento = $request->data_procedimento;
+        $procedimento->nome_procedimento = $request->nome_procedimento;
+        $procedimento->tipo_procedimento_id = $request->tipo_procedimento_id;
+        $procedimento->situacao_procedimento_id = 4; // id 4 = SOLICITADO
+        $procedimento->paciente_id = $request->paciente_id;
+
+        $procedimento->save();
+
+        if ($request->tipo_procedimento_id == 1) {
+
+            $equipe = new Equipe();
+
+            $equipe->chefe_id = $request->chefe_id;
+            $equipe->save();
+
+            $cirurgia = new Cirurgia();
+
+            $cirurgia->procedimento_id = $procedimento->id;
+            $cirurgia->equipe_id = $equipe->id;
+
+        }
+
+        if ($request->tipo_procedimento_id == 2) {
+
+            $exame = new Exame();
+
+            $exame->procedimento_id = $procedimento->id;
+            $exame->save();
+
+        }
+
+        if ($request->tipo_procedimento_id == 3) {
+
+            $consulta = new Consulta();
+
+            $consulta->procedimento_id = $procedimento->id;
+            $consulta->save();
+            
+        }
     }
 }
