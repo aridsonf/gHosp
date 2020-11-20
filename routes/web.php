@@ -22,11 +22,11 @@ Route::get('/', function () {
 
 Route::get('/cadastro-paciente', 'App\Http\Controllers\PacienteController@carregarDados');
 Route::get('/cadastro-funcionario', 'App\Http\Controllers\FuncionarioController@carregarDados');
+Route::get('/registro-procedimento', 'App\Http\Controllers\ProcedimentoController@carregarDados');
 
 
 Route::post('/cadastrar-paciente', 'App\Http\Controllers\CadastroController@cadastrarPaciente');
 Route::post('/cadastrar-funcionario', 'App\Http\Controllers\CadastroController@cadastrarFuncionario');
-
 Route::post('/registrar-procedimento', 'App\Http\Controllers\CadastroController@registrarProcedimento');
 
 
