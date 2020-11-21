@@ -25,6 +25,15 @@
           <a class="dropdown-item" href="/cadastro-paciente">Cadastrar Paciente</a>
         </div>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Procedimento
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/registro-procedimento">Cadastrar Procedimento</a>
+          <a class="dropdown-item" href="/listar-procedimento">Listar Procedimento</a>
+        </div>
+      </li>
       <li>
         <form>
           <a type="submit" class="btn btn-dark align-right" href="/adm-login">Sair</a>

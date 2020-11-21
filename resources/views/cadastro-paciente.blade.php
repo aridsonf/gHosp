@@ -321,8 +321,8 @@
                 urlBase: "{{ url('') }}",
                 checkAlergia: false,
                 checkDoenca: false,
-                estados: <?=json_encode($estados) ?>,
                 paises: <?=json_encode($paises) ?>,
+                estados: <?=json_encode($estados) ?>,
                 dados: {
                     'nome_completo': '',
                     'cpf': '',
