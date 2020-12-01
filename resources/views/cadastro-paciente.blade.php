@@ -383,7 +383,6 @@
                     });
                     
                 },
-                ,
                 limparCampos: function() {
                     this.dados.nome_completo = "";
                     this.dados.cpf = "";

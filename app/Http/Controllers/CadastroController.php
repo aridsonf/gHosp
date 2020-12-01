@@ -112,7 +112,6 @@ class CadastroController extends Controller
             $medico->crm = $request->medico['crm'];
             $medico->especialidade_id = $request->medico['especialidade_id'];
             $medico->area_atuacao_id = $request->medico['area_atuacao_id'];
-            $medico->tipo_funcionario_id = $request->tipo_funcionario_id;
             $medico->funcionario_id = $funcionario->id;
             
             $medico->save();
@@ -123,7 +122,6 @@ class CadastroController extends Controller
             $enfermeiro = new Enfermeiro();
 
             $enfermeiro->coren = $request->enfermeiro['coren'];
-            $enfermeiro->tipo_funcionario_id = $request->tipo_funcionario_id;
             $enfermeiro->funcionario_id = $funcionario->id;
 
             $enfermeiro->save();
@@ -133,7 +131,6 @@ class CadastroController extends Controller
         if ($request->tipo_funcionario_id == 3){
             $administrador = new Administrador();
 
-            $administrador->tipo_funcionario_id = $request->tipo_funcionario_id;
             $administrador->funcionario_id = $funcionario->id;
 
             $administrador->save();
@@ -158,13 +155,15 @@ class CadastroController extends Controller
 
             $equipe = new Equipe();
 
-            $equipe->chefe_id = $request->chefe_id;
+            $equipe->chefe_id = $request->funcionario_id;
             $equipe->save();
 
             $cirurgia = new Cirurgia();
 
             $cirurgia->procedimento_id = $procedimento->id;
             $cirurgia->equipe_id = $equipe->id;
+
+            $cirurgia->save();
 
         }
 

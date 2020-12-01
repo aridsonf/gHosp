@@ -16,6 +16,8 @@ class ProcedimentoController extends Controller
         $funcionarios   = Funcionario::get();
         $tipos_procedimentos  = TipoProcedimento::get();
 
+        //dd($pacientes, $funcionarios, $tipos_procedimentos);
+
         return view('registro-procedimento', compact('pacientes', 'funcionarios', 'tipos_procedimentos'));
 
     }

@@ -1,7 +1,7 @@
 @extends('template.app')
 
 @section('conteudo')
-    <div id="cadastro-procedimento" class="conteiner-fluid ">
+    <div id="registro-procedimento" class="conteiner-fluid ">
         <div class="card border-dark mb-3 ">
             <div class="card-header text-center" style="font-size:30px"><b>CADASTRO DE PROCEDIMENTO</b></div>
             <div class="card-body text-dark bg-dark">
@@ -10,8 +10,8 @@
                         <div class="form-group row">
                             <label for="inputNome3" class="col-sm-2 col-form-label td">Paciente</label>
                             <div class="col-sm-10">
-                                <select v-model="dados.paciente" class="form-control">
-                                    <option v-for="paciente in pacientes" v-bind:value="paciente.id">
+                                <select v-model="dados.paciente_id" class="form-control">
+                                    <option v-for="paciente in pacientes" v-bind:value="paciente.id_paciente">
                                         @{{ paciente.nome }}
                                     </option>
                                 </select>
@@ -28,17 +28,23 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label for="inputNomeProc" class="col-sm-2 col-form-label td">Nome do Procedimento</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputNomeProc" v-model="dados.nome_procedimento"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label for="dataProc" class="col-sm-2 col-form-label td">Data do Procedimento</label>
                             <div class="col-sm-10">
                                 <input class="form-control" type="date" id="dataNasc" max="2199-01-11" v-model="dados.data_procedimento">
                             </div>
                         </div>
-                        <div class="form-group row">
+                        <div class="form-group row" v-show="dados.tipo_procedimento_id == 1">
                             <label for="inputTipo1" class="col-sm-2 col-form-label td">Profissional Responsável</label>
                             <div class="col-md">
-                            <select v-model="dados.id_funcionario" class="form-control">
-                                <option v-for="nome in funcionarios" v-bind:value="nome.id">
-                                    @{{ id_funcionario.nome }}
+                            <select v-model="dados.funcionario_id" class="form-control">
+                                <option v-for="funcionario in funcionarios" v-bind:value="funcionario.id_funcionario">
+                                    @{{ funcionario.nome }}
                                 </option>
                             </select>
                             </div>
@@ -61,15 +67,15 @@
             el: '#registro-procedimento',
             data: {
                 urlBase: "{{ url('') }}",
-                checkAlergia: false,
-                checkDoenca: false,
                 pacientes: <?=json_encode($pacientes) ?>,
                 funcionarios: <?=json_encode($funcionarios) ?>,
                 tipos_procedimentos: <?=json_encode($tipos_procedimentos) ?>,
                 dados: {
-                    'nome_paciente': '',
+                    'paciente_id': '',
+                    'funcionario_id': '',
                     'data_procedimento': '',
                     'tipo_procedimento_id': '',
+                    'nome_procedimento': '',
                 },
                 errors: '',
             },
@@ -78,7 +84,7 @@
                     return (!str || 0 === str.length || /^\s*$/.test(str) || str == 0);
                 },
                 enviar: function() {
-                    url = this.urlBase + '/registro-procedimento';
+                    url = this.urlBase + '/registrar-procedimento';
 
                     console.log(this.dados);
                    
@@ -99,13 +105,11 @@
                     
                 },
                 limparCampos: function() {
-                    this.dados.nome_paciente = "";
-                    this.dados.tipo_procedimento_id = "";
+                    this.dados.paciente_id = "";
+                    this.dados.funcionario_id = "";
                     this.dados.data_procedimento = "";
-                    this.dados.id_paciente = "";
-                    this.dados.id_funcionario = "";
-                    
-
+                    this.dados.tipo_procedimento_id = "";
+                    this.dados.nome_procedimento = "";
                 }
             },
             filters: {
