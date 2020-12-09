@@ -35,7 +35,7 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
 
 ## 2.2 Diagrama de Classes
 
-![Diagrama de Classes](https://github.com/aridsonf/gHosp/blob/main/DiagramadeClasses.png)
+![Diagrama de Classes](https://github.com/aridsonf/gHosp/blob/main/DiagramaDeClasses.png)
 
 ### 2.3 Diagrama de Estados da classe Paciente
 
