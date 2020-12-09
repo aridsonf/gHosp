@@ -33,31 +33,38 @@ Um software em aplicação web para operar como um sistema de gestão hospitalar
 -   [RNF07] – O limite de integrantes das equipes varia de acordo com a gravidade dos procedimentos hospitalares.
 -   [RNF08] – O sistema não permitirá a alocação de médico/enfermeiro que estão com a carga horária cheia.
 
-## 2.2 Casos de Uso
+## 2.2 Diagrama de Classes
 
-### 2.2.1 Diagrama de Casos de Uso
+![Diagrama de Classes](https://github.com/aridsonf/gHosp/blob/main/DiagramadeClasses.png)
+
+### 2.3 Diagrama de Estados da classe Paciente
+
+![Diagrama de de Estados da classe Paciente](https://github.com/aridsonf/gHosp/blob/main/Diagrama_Estado_Paciente.png)
+## 2.4 Casos de Uso
+
+### 2.4.1 Diagrama de Casos de Uso
 
 ![Diagrama de Casos de Uso](https://github.com/aridsonf/gHosp/blob/main/gHosp%20-%20Diagrama%20de%20Casos%20de%20Uso.png)
 
-### 2.2.2 Descrição dos Casos de Uso
+### 2.4.2 Descrição dos Casos de Uso
 
 -   #### Definir equipe
-    -   **Descrição:** O Admnistrador deverá fazer a definição de equipe de funcionários.
-    -   **Ator:** Admnistrador.
+    -   **Descrição:** O Médico deverá fazer a definição de equipe de funcionários.
+    -   **Ator:** Médico.
     -   **Pré-condições:**
         - Haver um paciente que irá realizar um procedimento que necessitará de uma equipe.
         - Haver funcionários disponiveis para formação de equipe.
     -   **Fluxo principal:**
-        1. O Admnistrador irá entrar no sistema 
-        2. O Admnistrador selecionará a opção de Definir Equipe.
+        1. O Médico irá entrar no sistema 
+        2. O Médico selecionará a opção de Definir Equipe.
         3. O Sistema irá listar os profissionais disponíveis.
-        4. O Admnistrador definirá a equipe baseado nos requisitos do procedimento que esta irá realizar.
-        5. O Admnistrador será retornado para sua tela inicial.
+        4. O Médico definirá a equipe baseado nos requisitos do procedimento que esta irá realizar.
+        5. O Médico será retornado para sua tela inicial.
     -   **Fluxo alternativo:**
         1. O Sistema não encontra profissionais disponíveis.
-        2. O Sitema irá retornar uma mensagem para o Admnistrador.
-        3. O Admnistrador irá confirmar que recebeu a mensagem.
-        4. O Admnistrador será retornado para sua tela inicial.
+        2. O Sitema irá retornar uma mensagem para o Médico.
+        3. O Médico irá confirmar que recebeu a mensagem.
+        4. O Médico será retornado para sua tela inicial.
     -   **Pós-condição:**
         -   Deverá ser registrado no sistema a equipe definida.
 -   #### Alocar Pacientes
